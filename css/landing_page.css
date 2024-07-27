@@ -3,12 +3,24 @@ body {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
   font-weight: 300;
-}
-
-.nav-link {
   color: #fffcf6;
 }
 
+nav {
+  height: 50px;
+  margin: 20px 0 !important;
+}
+
+h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 150px;
+}
+
+.primary-color {
+  color: #fffcf6;
+}
+
+.secondary-color,
 .nav-link:active,
 .nav-link:hover,
 .nav-link:focus,
@@ -16,13 +28,33 @@ body {
   color: #fcd043;
 }
 
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+}
+
 #navbar-links-container {
   justify-content: center !important;
-  flex-shrink: 1;
+  flex: 8;
+}
+
+#navbar-name-container,
+#navbar-button-container {
+  display: flex;
+  flex: 1;
+}
+
+#navbar-button-container {
+  justify-content: flex-end;
 }
 
 #navbar-links > * {
   padding: 0 20px;
+}
+
+#navbar-item-container {
+  padding: 0 40px;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=landing_page.css.map */
