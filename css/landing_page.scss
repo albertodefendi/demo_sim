@@ -1,15 +1,18 @@
+// Variables
 $primary-color: #313f38;
 $secondary-color: #fcd043;
 $white: #fffcf6;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
 
+// Base styles
 body {
     background-color: $primary-color;
     font-family: $primary-font;
     letter-spacing: 0.5px;
     font-weight: 300;
     color: $white;
+    margin: 0 auto;
 }
 
 nav {
@@ -17,13 +20,23 @@ nav {
     margin: 20px 0 !important;
 }
 
+// Typography
 h1 {
     font-family: $secondary-font;
     font-size: 150px;
+
+    @media (max-width: 1024) {
+        font-size: 70px;
+    }
 }
 
-.primary-color {
+// Utility classes
+.white-color {
     color: $white;
+}
+
+.primary-color-background {
+    background-color: $primary-color;
 }
 
 .secondary-color,
@@ -34,6 +47,7 @@ h1 {
     color: $secondary-color;
 }
 
+// Navbar
 .navbar-toggler {
     background-color: transparent;
     border: none;
@@ -63,19 +77,39 @@ h1 {
     justify-content: space-between;
 }
 
+// Header
 #header-left {
     width: fit-content;
 }
 
 #logo {
-	min-width: 450px;
-	min-height: 450px;
+    min-width: 300px;
+    min-height: 300px;
     background-image: url(../assets/hotel_logo.png);
-	background-size: cover;
-	display: block;
-	border-radius: 50%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
 }
 
+#rooms-image {
+    margin: 80px 0;
+    min-height: 700px;
+    background-image: url(../assets/rooms.png);
+    background-size: cover;
+    padding: 0 9px;
+}
+
+#facilities {
+    padding: 0 9px;
+    color: $secondary-color;
+}
+
+#brief {
+    max-width: 70%;
+    margin-left: auto;
+}
+
+// Flex utilities
 .flex-1 {
     flex: 1;
 }

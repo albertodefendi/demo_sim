@@ -22,27 +22,27 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-xl">
+    <nav class="navbar navbar-expand-xl sticky-top primary-color-background">
         <div class="container-fluid" id="navbar-item-container">
             <div id="navbar-name-container">
-                <a class="nav-link primary-color fw-bold" href="#" id="navbar-name">BANKHOTEL</a>
+                <a class="nav-link white-color fw-bold" href="#" id="navbar-name">BANKHOTEL</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-links-container">
                 <ul class="navbar-nav" id="navbar-links">
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#">ABOUT</a>
+                        <a class="nav-link white-color" href="#">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#">ROOMS</a>
+                        <a class="nav-link white-color" href="#">ROOMS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#">RESTAURANT</a>
+                        <a class="nav-link white-color" href="#">RESTAURANT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#">CONFERENCE HALL</a>
+                        <a class="nav-link white-color" href="#">CONFERENCE HALL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link primary-color" href="#">CONTACTS</a>
+                        <a class="nav-link white-color" href="#">CONTACTS</a>
                     </li>
                 </ul>
             </div>
@@ -57,23 +57,26 @@
         </div>
     </nav>
 
-    <div class="container-xl" id="container">
+    <div class="container-xl d-flex flex-column" id="container">
         <div class="d-flex align-items-center" id="header">
-            <div class="flex-3" id="header-left">
-                <h1><span class="primary-color">Bank</span><span class="secondary-color">Hotel</span></h1>
+            <div class="flex-1" id="header-left">
+                <h1><span class="white-color">Bank</span><span class="secondary-color">Hotel</span></h1>
+                <p class="fs-5" id="facilities">rooms // restaurant // congress hall // wine bar</p>
             </div>
-            <div class="flex-2" id="header-right">
-                <div class="d-flex">
-                    <div class="flex-4" id="logo"></div>
-                    <p class="text-center flex-1">The luxurious hotel in the most beautiful European city with an exclusive
-                        restaurant, conference-hall, and art-bar.</p>
-                </div>
+            <div class="flex-1 d-flex flex-column" id="header-right">
+                <div class="flex-1" id="logo"></div>
+                <p class="flex-1 text-end" id="brief">The luxurious hotel in the most beautiful European city with an
+                    exclusive
+                    restaurant, conference-hall, and art-bar.</p>
             </div>
+            <div></div>
+        </div>
+        <div id="rooms-image">
+
         </div>
     </div>
 
-
-    <!-- <script src="../javascript/script.js"></script> -->
+    <script src="../javascript/script.js"></script>
 
 </body>
 
