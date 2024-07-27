@@ -1,0 +1,31 @@
+$primary-color: #313f38;
+$secondary-color: #fcd043;
+$white: #fffcf6;
+$primary-font: "Raleway", sans-serif;
+
+body {
+    background-color: $primary-color;
+    font-family: $primary-font;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.nav-link {
+    color: $white;
+}
+
+.nav-link:active,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    color: $secondary-color;
+}
+
+#navbar-links-container {
+    justify-content: center !important;
+    flex-shrink: 1;
+}
+
+#navbar-links > * {
+    padding: 0 20px;
+}
