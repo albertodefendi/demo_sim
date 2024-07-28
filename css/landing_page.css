@@ -122,6 +122,12 @@ h1 {
   color: #313f38;
   margin: 0;
 }
+#quick-actions > :first-child, #quick-actions > :nth-child(2) {
+  border-right: rgba(49, 63, 56, 0.5) solid 1px;
+}
+#quick-actions > :last-child, #quick-actions > :nth-child(2) {
+  border-left: rgba(49, 63, 56, 0.5) solid 1px;
+}
 
 #icon-in {
   background-image: url("../assets/check-in.svg");
