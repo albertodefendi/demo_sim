@@ -1,4 +1,4 @@
-body {
+#container-1 {
   background-color: #313f38;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -7,19 +7,55 @@ body {
   margin: 0 auto;
 }
 
+#container-2 {
+  background-color: #fffcf6;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  color: #313f38;
+  margin: 0 auto;
+}
+
 nav {
   height: 50px;
-  margin: 20px 0 !important;
+  padding: 40px 0 !important;
 }
 
 h1 {
   font-family: "Poiret One", sans-serif;
   font-size: 150px;
+  margin: 0;
 }
 @media (max-width: 1024) {
   h1 {
     font-size: 70px;
   }
+}
+
+h2 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 100px;
+  margin: 0;
+}
+@media (max-width: 1024) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+h4 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 40px;
+  margin: 0;
+}
+@media (max-width: 1024) {
+  h4 {
+    font-size: 40px;
+  }
+}
+
+.spacing {
+  padding: 200px 0 200px 0;
 }
 
 .white-color {
@@ -43,19 +79,25 @@ h1 {
   border: none;
 }
 
-#navbar-links-container {
-  justify-content: center !important;
-  flex: 8;
-}
-
-#navbar-name-container,
-#navbar-button-container {
-  display: flex;
+.flex-1 {
   flex: 1;
 }
 
-#navbar-button-container {
-  justify-content: flex-end;
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+#navbar-links-container {
+  justify-content: center !important;
+  flex: 8;
 }
 
 #navbar-links > * {
@@ -72,11 +114,13 @@ h1 {
 }
 
 #logo {
-  min-width: 300px;
-  min-height: 300px;
-  background-image: url(../assets/hotel_logo.png);
+  background-image: url("../assets/hotel_logo.png");
   background-size: contain;
   background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+  min-width: 300px;
+  min-height: 300px;
   margin-left: auto;
 }
 
@@ -95,22 +139,6 @@ h1 {
 #brief {
   max-width: 70%;
   margin-left: auto;
-}
-
-.flex-1 {
-  flex: 1;
-}
-
-.flex-2 {
-  flex: 2;
-}
-
-.flex-3 {
-  flex: 3;
-}
-
-.flex-4 {
-  flex: 4;
 }
 
 #quick-actions {
@@ -135,7 +163,6 @@ h1 {
   background-repeat: no-repeat;
   height: 40px;
   width: 40px;
-  margin: 10px 0;
 }
 
 #icon-out {
@@ -144,7 +171,6 @@ h1 {
   background-repeat: no-repeat;
   height: 40px;
   width: 40px;
-  margin: 10px 0;
 }
 
 #icon-bed {
@@ -153,7 +179,22 @@ h1 {
   background-repeat: no-repeat;
   height: 40px;
   width: 40px;
-  margin: 10px 0;
+}
+
+#img1 {
+  background-image: url("../assets/img1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 400px;
+}
+
+#img2 {
+  background-image: url("../assets/img2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 250px;
 }
 
 /*# sourceMappingURL=landing_page.css.map */

@@ -24,7 +24,7 @@
 
     <nav class="navbar navbar-expand-xl sticky-top primary-color-background">
         <div class="container-fluid" id="navbar-item-container">
-            <div id="navbar-name-container">
+            <div class="d-flex flex-1" id="navbar-name-container">
                 <a class="nav-link white-color fw-bold" href="#" id="navbar-name">BANKHOTEL</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-links-container">
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="navbar-button-container">
+            <div class="d-flex flex-1 justify-content-end" id="navbar-button-container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbar-links-container" aria-controls="navbar-links-container"
                     aria-expanded="false" aria-label="Toggle navigation" id="navbar-button">
@@ -57,34 +57,75 @@
         </div>
     </nav>
 
-    <div class="container-xl d-flex flex-column" id="container">
-        <div class="d-flex align-items-center" id="header">
-            <div class="flex-1" id="header-left">
-                <h1><span class="white-color">Bank</span><span class="secondary-color">Hotel</span></h1>
-                <p class="fs-5" id="facilities">rooms // restaurant // congress hall // wine bar</p>
+    <div id="container-1">
+        <div class="container-xl d-flex flex-column">
+            <div class="d-flex align-items-center" id="header">
+                <div class="flex-1" id="header-left">
+                    <h1><span class="white-color">Bank</span><span class="secondary-color">Hotel</span></h1>
+                    <p class="fs-5" id="facilities">rooms // restaurant // congress hall // wine bar</p>
+                </div>
+                <div class="flex-1 d-flex flex-column" id="header-right">
+                    <div class="flex-1" id="logo"></div>
+                    <p class="flex-1 text-end" id="brief">The luxurious hotel in the most beautiful European city with
+                        an
+                        exclusive
+                        restaurant, conference-hall, and art-bar.</p>
+                </div>
+                <div></div>
             </div>
-            <div class="flex-1 d-flex flex-column" id="header-right">
-                <div class="flex-1" id="logo"></div>
-                <p class="flex-1 text-end" id="brief">The luxurious hotel in the most beautiful European city with an
-                    exclusive
-                    restaurant, conference-hall, and art-bar.</p>
+            <div id="rooms-image">
+                <div class="d-flex align-items-center" id="quick-actions">
+                    <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center"
+                        id="check-in">
+                        <p>CHECK IN</p>
+                        <div class="svg-icon mt-2" id="icon-in"></div>
+                    </div>
+                    <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center"
+                        id="check-out">
+                        <p>CHECK OUT</p>
+                        <div class="svg-icon mt-2" id="icon-out"></div>
+                    </div>
+                    <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center"
+                        id="book-room">
+                        <p>BOOK ROOM</p>
+                        <div class="svg-icon mt-2" id="icon-bed"></div>
+                    </div>
+                </div>
             </div>
-            <div></div>
+            <div class="d-flex">
+                <div class="d-flex flex-column flex-fill">
+                    <div class="text-start" id="phone-number">Tel: +38 032 297 50 20</div>
+                    <div class="text-start" id="address">Address: 8 Lystopadovoho Chynu, Lviv</div>
+                </div>
+                <div class="flex-fill text-end fst-italic">ART & CONGRESS HALL</div>
+            </div>
+            <div class="spacing" id="spacing1"></div>
+            <div class="d-flex" id="about-section">
+                <div class="d-flex">
+                    <div class="flex-1" id="img1"></div>
+                </div>
+                <div class="flex-fill d-flex justify-content-center flex-column p-5" id="about-us">
+                    <h2 class="text-end mb-4"><span class="secondary-color d-block">ABOUT </span><span
+                            class="d-block">US</span>
+                    </h2>
+                    <div class="mt-4">
+                        <h4 class="mb-5">High Quality</h4>
+                        <p>The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated and
+                            modernized to meet the expectations of the most demanding guests. We offer luxurious rooms,
+                            numerous facilities, and exceptional service. </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="flex-1" id="img2"></div>
+                </div>
+            </div>
         </div>
-        <div id="rooms-image">
-            <div class="d-flex align-items-center" id="quick-actions">
-                <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center" id="check-in">
-                    <p>CHECK IN</p>
-                    <div class="svg-icon" id="icon-in"></div>
-                </div>
-                <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center" id="check-out">
-                    <p>CHECK OUT</p>
-                    <div class="svg-icon" id="icon-out"></div>
-                </div>
-                <div class="flex-fill text-center d-flex flex-column justify-content-center align-items-center" id="book-room">
-                    <p>BOOK ROOM</p>
-                    <div class="svg-icon" id="icon-bed"></div>
-                </div>
+    </div>
+    <div id="container-2">
+        <div class="spacing"></div>
+        <div class="d-flex">
+            <div class="text-start">
+                <h2>ROOMS<br>& APARTMENTS</h1>
             </div>
         </div>
     </div>

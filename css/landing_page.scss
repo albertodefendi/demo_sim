@@ -1,4 +1,3 @@
-// Variables
 $primary-color: #313f38;
 $secondary-color: #fcd043;
 $white: #fffcf6;
@@ -6,41 +5,68 @@ $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
 $quick-actions-color: #fcd043d7;
 
-@mixin svg-icon($icon-url) {
-    background-image: url($icon-url);
+@mixin image($image-url, $height: auto, $width: auto) {
+    background-image: url($image-url);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    margin: 10px 0;
+    height: $height;
+    width: $width;
 }
 
-// Base styles
-body {
-    background-color: $primary-color;
-    font-family: $primary-font;
+@mixin body($background-color, $font, $color) {
+    background-color: $background-color;
+    font-family: $font;
     letter-spacing: 0.5px;
     font-weight: 300;
-    color: $white;
+    color: $color;
     margin: 0 auto;
+}
+
+#container-1 {
+    @include body($primary-color, $primary-font, $white)
+}
+
+#container-2 {
+    @include body($white, $primary-font, $primary-color)
 }
 
 nav {
     height: 50px;
-    margin: 20px 0 !important;
+    padding: 40px 0 !important;
 }
 
-// Typography
 h1 {
     font-family: $secondary-font;
     font-size: 150px;
+    margin: 0;
 
     @media (max-width: 1024) {
         font-size: 70px;
     }
 }
+h2 {
+    font-family: $secondary-font;
+    font-size: 100px;
+    margin: 0;
 
-// Utility classes
+    @media (max-width: 1024) {
+        font-size: 40px;
+    }
+}
+h4 {
+    font-family: $secondary-font;
+    font-size: 40px;
+    margin: 0;
+
+    @media (max-width: 1024) {
+        font-size: 40px;
+    }
+}
+
+.spacing {
+    padding: 200px 0 200px 0;
+}
+
 .white-color {
     color: $white;
 }
@@ -57,25 +83,27 @@ h1 {
     color: $secondary-color;
 }
 
-// Navbar
 .navbar-toggler {
     background-color: transparent;
     border: none;
 }
 
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+
 #navbar-links-container {
     justify-content: center !important;
     flex: 8;
-}
-
-#navbar-name-container,
-#navbar-button-container {
-    display: flex;
-    flex: 1;
-}
-
-#navbar-button-container {
-    justify-content: flex-end;
 }
 
 #navbar-links > * {
@@ -87,17 +115,14 @@ h1 {
     justify-content: space-between;
 }
 
-// Header
 #header-left {
     width: fit-content;
 }
 
 #logo {
+    @include image("../assets/hotel_logo.png", 300px, 300px);
     min-width: 300px;
     min-height: 300px;
-    background-image: url(../assets/hotel_logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-left: auto;
 }
 
@@ -116,20 +141,6 @@ h1 {
 #brief {
     max-width: 70%;
     margin-left: auto;
-}
-
-// Flex utilities
-.flex-1 {
-    flex: 1;
-}
-.flex-2 {
-    flex: 2;
-}
-.flex-3 {
-    flex: 3;
-}
-.flex-4 {
-    flex: 4;
 }
 
 #quick-actions {
@@ -151,13 +162,21 @@ h1 {
 }
 
 #icon-in {
-    @include svg-icon($icon-url: "../assets/check-in.svg");
+    @include image("../assets/check-in.svg", 40px, 40px);
 }
 
 #icon-out {
-    @include svg-icon($icon-url: "../assets/check-out.svg");
+    @include image("../assets/check-out.svg", 40px, 40px);
 }
 
 #icon-bed {
-    @include svg-icon($icon-url: "../assets/bed.svg");
+    @include image("../assets/bed.svg", 40px, 40px);
+}
+
+#img1 {
+    @include image("../assets/img1.png", 600px, 400px);
+}
+
+#img2 {
+    @include image("../assets/img2.png", 350px, 250px);
 }
