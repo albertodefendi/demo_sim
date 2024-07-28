@@ -64,7 +64,7 @@ h4 {
 }
 
 .spacing {
-    padding: 200px 0 200px 0;
+    padding: 100px 0 100px 0;
 }
 
 .white-color {
@@ -179,4 +179,20 @@ h4 {
 
 #img2 {
     @include image("../assets/img2.png", 350px, 250px);
+}
+
+#img3 {
+    @include image("../assets/img3.png", 350px, 250px);
+}
+
+#img4 {
+    @include image("../assets/img4.png", 600px, 400px);
+}
+
+.circle-button {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: solid 1px $primary-color;
+    background-color: transparent;
 }

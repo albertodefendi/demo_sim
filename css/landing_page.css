@@ -55,7 +55,7 @@ h4 {
 }
 
 .spacing {
-  padding: 200px 0 200px 0;
+  padding: 100px 0 100px 0;
 }
 
 .white-color {
@@ -195,6 +195,30 @@ h4 {
   background-repeat: no-repeat;
   height: 350px;
   width: 250px;
+}
+
+#img3 {
+  background-image: url("../assets/img3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 250px;
+}
+
+#img4 {
+  background-image: url("../assets/img4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 400px;
+}
+
+.circle-button {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: solid 1px #313f38;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=landing_page.css.map */
