@@ -4,6 +4,16 @@ $secondary-color: #fcd043;
 $white: #fffcf6;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
+$quick-actions-color: #fcd043d7;
+
+@mixin svg-icon($icon-url) {
+    background-image: url($icon-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0;
+}
 
 // Base styles
 body {
@@ -86,7 +96,7 @@ h1 {
     min-width: 300px;
     min-height: 300px;
     background-image: url(../assets/hotel_logo.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     margin-left: auto;
 }
@@ -96,7 +106,6 @@ h1 {
     min-height: 700px;
     background-image: url(../assets/rooms.png);
     background-size: cover;
-    padding: 0 9px;
 }
 
 #facilities {
@@ -121,4 +130,28 @@ h1 {
 }
 .flex-4 {
     flex: 4;
+}
+
+#quick-actions {
+    background-color: $quick-actions-color;
+    height: 7rem;
+    div {
+        p {
+            font-weight: 700;
+            color: $primary-color;
+            margin: 0;
+        }
+    }
+}
+
+#icon-in {
+    @include svg-icon($icon-url: "../assets/check-in.svg");
+}
+
+#icon-out {
+    @include svg-icon($icon-url: "../assets/check-out.svg");
+}
+
+#icon-bed {
+    @include svg-icon($icon-url: "../assets/bed.svg");
 }

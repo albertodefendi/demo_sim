@@ -85,7 +85,6 @@ h1 {
   min-height: 700px;
   background-image: url(../assets/rooms.png);
   background-size: cover;
-  padding: 0 9px;
 }
 
 #facilities {
@@ -112,6 +111,43 @@ h1 {
 
 .flex-4 {
   flex: 4;
+}
+
+#quick-actions {
+  background-color: rgba(252, 208, 67, 0.8431372549);
+  height: 7rem;
+}
+#quick-actions div p {
+  font-weight: 700;
+  color: #313f38;
+  margin: 0;
+}
+
+#icon-in {
+  background-image: url("../assets/check-in.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+}
+
+#icon-out {
+  background-image: url("../assets/check-out.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+}
+
+#icon-bed {
+  background-image: url("../assets/bed.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=landing_page.css.map */
