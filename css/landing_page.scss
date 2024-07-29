@@ -1,9 +1,43 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// -------------------------------------------------------------------------------------------------------------
+
 $primary-color: #313f38;
 $secondary-color: #fcd043;
 $white: #fffcf6;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
 $quick-actions-color: #fcd043d7;
+
+$h1-font-size: $font-size-base * 8;
+$h2-font-size: $font-size-base * 7;
+$h3-font-size: $font-size-base * 6;
+$h4-font-size: $font-size-base * 4.8;
+$h5-font-size: $font-size-base * 3.5;
+$h6-font-size: $font-size-base * 2.5;
+$h7-font-size: $font-size-base * 1.3;
+$h8-font-size: $font-size-base;
+
+// -------------------------------------------------------------------------------------------------------------
+
+$new-font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+
+// -------------------------------------------------------------------------------------------------------------
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// -------------------------------------------------------------------------------------------------------------
 
 @mixin image($image-url, $height: auto, $width: auto) {
     background-image: url($image-url);
@@ -22,6 +56,8 @@ $quick-actions-color: #fcd043d7;
     margin: 0 auto;
 }
 
+// -------------------------------------------------------------------------------------------------------------
+
 #container-1 {
     @include body($primary-color, $primary-font, $white)
 }
@@ -35,33 +71,12 @@ nav {
     padding: 40px 0 !important;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: $secondary-font;
-    font-size: 150px;
     margin: 0;
-
-    @media (max-width: 1024) {
-        font-size: 70px;
-    }
 }
-h2 {
-    font-family: $secondary-font;
-    font-size: 100px;
-    margin: 0;
 
-    @media (max-width: 1024) {
-        font-size: 40px;
-    }
-}
-h4 {
-    font-family: $secondary-font;
-    font-size: 40px;
-    margin: 0;
-
-    @media (max-width: 1024) {
-        font-size: 40px;
-    }
-}
+// -------------------------------------------------------------------------------------------------------------
 
 .spacing {
     padding: 100px 0 100px 0;
@@ -88,6 +103,14 @@ h4 {
     border: none;
 }
 
+.circle-button {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: solid 1px $primary-color;
+    background-color: transparent;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -100,6 +123,8 @@ h4 {
 .flex-4 {
     flex: 4;
 }
+
+// -------------------------------------------------------------------------------------------------------------
 
 #navbar-links-container {
     justify-content: center !important;
@@ -187,12 +212,4 @@ h4 {
 
 #img4 {
     @include image("../assets/img4.png", 600px, 400px);
-}
-
-.circle-button {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    border: solid 1px $primary-color;
-    background-color: transparent;
 }
