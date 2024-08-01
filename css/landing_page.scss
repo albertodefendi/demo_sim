@@ -22,16 +22,25 @@ $h8-font-size: $font-size-base;
 // -------------------------------------------------------------------------------------------------------------
 
 $new-font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-  7: $h7-font-size,
-  8: $h8-font-size
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $h7-font-size,
+    8: $h8-font-size
 );
 $font-sizes: map-merge($font-sizes, $new-font-sizes);
+
+$new-container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1440px,
+  xxl: 1720px
+);
+$container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
 
 // -------------------------------------------------------------------------------------------------------------
 
@@ -39,12 +48,14 @@ $font-sizes: map-merge($font-sizes, $new-font-sizes);
 
 // -------------------------------------------------------------------------------------------------------------
 
-@mixin image($image-url, $height: auto, $width: auto) {
+@mixin image($image-url, $max-height: auto, $max-width: auto, $min-height: auto, $min-width: auto) {
     background-image: url($image-url);
     background-size: contain;
     background-repeat: no-repeat;
-    height: $height;
-    width: $width;
+    max-height: $max-height;
+    max-width: $max-width;
+    min-height: $min-height;
+    min-width: $min-width;
 }
 
 @mixin body($background-color, $font, $color) {
@@ -59,11 +70,11 @@ $font-sizes: map-merge($font-sizes, $new-font-sizes);
 // -------------------------------------------------------------------------------------------------------------
 
 #container-1 {
-    @include body($primary-color, $primary-font, $white)
+    @include body($primary-color, $primary-font, $white);
 }
 
 #container-2 {
-    @include body($white, $primary-font, $primary-color)
+    @include body($white, $primary-font, $primary-color);
 }
 
 nav {
@@ -71,7 +82,12 @@ nav {
     padding: 40px 0 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $secondary-font;
     margin: 0;
 }
@@ -178,10 +194,12 @@ h1, h2, h3, h4, h5, h6 {
             margin: 0;
         }
     }
-    > :first-child, > :nth-child(2) {
+    > :first-child,
+    > :nth-child(2) {
         border-right: rgba($primary-color, 0.5) solid 1px;
     }
-    > :last-child, > :nth-child(2) {
+    > :last-child,
+    > :nth-child(2) {
         border-left: rgba($primary-color, 0.5) solid 1px;
     }
 }
@@ -199,17 +217,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #img1 {
-    @include image("../assets/img1.png", 600px, 400px);
+    @include image("../assets/img1.png", 100vh, 100vw, 40vh, 40vw);
 }
 
 #img2 {
-    @include image("../assets/img2.png", 350px, 250px);
+    @include image("../assets/img2.png", 100vh, 100vw, 20vh, 20vw);
 }
 
 #img3 {
-    @include image("../assets/img3.png", 350px, 250px);
+    @include image("../assets/img3.png", 100vh, 100vw, 20vh, 20vw);
 }
 
 #img4 {
-    @include image("../assets/img4.png", 600px, 400px);
+    @include image("../assets/img4.png", 100vh, 100vw, 50vh, 50vw);
+}
+
+#img4alt {
+    height: 30vw;
+    width: 20vw;
+    min-height: 500px;
+    min-width: 200px;
+    object-fit: cover;
 }
