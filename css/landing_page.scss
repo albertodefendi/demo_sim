@@ -10,6 +10,8 @@ $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
 $quick-actions-color: #fcd043d7;
 
+// -------------------------------------------------------------------------------------------------------------
+
 $h1-font-size: $font-size-base * 8;
 $h2-font-size: $font-size-base * 7;
 $h3-font-size: $font-size-base * 6;
@@ -18,8 +20,6 @@ $h5-font-size: $font-size-base * 3.5;
 $h6-font-size: $font-size-base * 2.5;
 $h7-font-size: $font-size-base * 1.3;
 $h8-font-size: $font-size-base;
-
-// -------------------------------------------------------------------------------------------------------------
 
 $new-font-sizes: (
     1: $h1-font-size,
@@ -42,11 +42,10 @@ $new-container-max-widths: (
 );
 $container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
 
-
 $accordion-bg: transparent;
 $accordion-border-color: transparent;
 $accordion-button-active-bg: transparent;
-
+$accordion-button-active-color: $primary-color;
 // -------------------------------------------------------------------------------------------------------------
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -69,8 +68,8 @@ $accordion-button-active-bg: transparent;
     height: $height;
     max-width: $max-width;
     max-height: $max-height;
-    // min-width: $min-width;
-    // min-height: $min-height;
+    min-width: $min-width;
+    min-height: $min-height;
 }
 
 @mixin body($background-color, $font, $color) {
@@ -164,7 +163,7 @@ h6 {
 }
 
 .hline {
-    border: solid 1px rgb(236, 236, 236);;
+    border: solid 1px rgb(236, 236, 236);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -183,14 +182,12 @@ h6 {
     justify-content: space-between;
 }
 
-#header-left {
-    width: fit-content;
-}
+// #header-left {
+//     width: fit-content;
+// }
 
 #logo {
-    @include image("../assets/hotel_logo.png", 300px, 300px);
-    min-width: 300px;
-    min-height: 300px;
+    @include image("../assets/hotel_logo.png", 300px, auto, 150px, 150px, 600px, auto);
     margin-left: auto;
 }
 
@@ -257,4 +254,12 @@ h6 {
 
 #img4 {
     @include image("../assets/img4.png", 100vw, auto, 1500px, auto);
+}
+
+#img5 {
+    @include image("../assets/img5.png", 100vw, auto, 1500px, auto);
+}
+
+#img6 {
+    @include image("../assets/img6.png", 33vw, 33vw, 400px, auto, 200px, auto);
 }
