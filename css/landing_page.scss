@@ -17,7 +17,7 @@ $h2-font-size: $font-size-base * 7;
 $h3-font-size: $font-size-base * 6;
 $h4-font-size: $font-size-base * 4.8;
 $h5-font-size: $font-size-base * 3.5;
-$h6-font-size: $font-size-base * 2.5;
+$h6-font-size: $font-size-base * 2.2;
 $h7-font-size: $font-size-base * 1.3;
 $h8-font-size: $font-size-base;
 
@@ -70,6 +70,12 @@ $accordion-button-active-color: $primary-color;
     max-height: $max-height;
     min-width: $min-width;
     min-height: $min-height;
+}
+
+@mixin img($width, $max-width) {
+    object-fit: contain;
+    width: $width;
+    max-width: $max-width;
 }
 
 @mixin body($background-color, $font, $color) {
@@ -182,22 +188,6 @@ h6 {
     justify-content: space-between;
 }
 
-// #header-left {
-//     width: fit-content;
-// }
-
-#logo {
-    @include image("../assets/hotel_logo.png", 300px, auto, 150px, 150px, 600px, auto);
-    margin-left: auto;
-}
-
-#rooms-image {
-    margin: 80px 0;
-    min-height: 700px;
-    background-image: url(../assets/rooms.png);
-    background-size: cover;
-}
-
 #facilities {
     padding: 0 9px;
     color: $secondary-color;
@@ -228,6 +218,22 @@ h6 {
     }
 }
 
+// -------------------------------------------------------------------------------------------------------------
+
+#logo {
+    // @include image("../assets/hotel_logo.png", 300px, auto, 150px, 150px, 600px, auto);
+    @include img(60vw, 300px);
+    margin-left: auto;
+}
+
+#rooms-image {
+    margin: 80px 0;
+    min-height: 700px;
+    background-image: url(../assets/rooms.png);
+    background-size: cover;
+    background-position: center;
+}
+
 #icon-in {
     @include image("../assets/check-in.svg", 40px, 40px);
 }
@@ -241,25 +247,29 @@ h6 {
 }
 
 #img1 {
-    @include image("../assets/img1.png", 100vh, 100vw, 40vh, 40vw);
+    @include img(36vw, 550px);
 }
 
 #img2 {
-    @include image("../assets/img2.png", 100vh, 100vw, 20vh, 20vw);
+    @include img(36vw, 350px);
 }
 
 #img3 {
-    @include image("../assets/img3.png", 100vh, 100vw, 20vh, 20vw);
+    @include img(36vw, 350px);
 }
 
 #img4 {
-    @include image("../assets/img4.png", 100vw, auto, 1500px, auto);
+    @include img(36vw, 550px);
 }
 
 #img5 {
-    @include image("../assets/img5.png", 100vw, auto, 1500px, auto);
+    @include img(36vw, 550px);
 }
 
 #img6 {
-    @include image("../assets/img6.png", 33vw, 33vw, 400px, auto, 200px, auto);
+    @include img(50vw, 500px);
+}
+
+#img7 {
+    @include img(36vw, 500px);
 }
