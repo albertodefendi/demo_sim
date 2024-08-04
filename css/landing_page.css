@@ -12014,15 +12014,15 @@ h1, .h1 {
 #best-apartments {
   position: absolute;
   top: 5%;
-  left: 0%;
+  left: 5%;
   color: #fcd043;
 }
 
 #best-apartments-description {
-  max-width: 33%;
+  max-width: 25%;
   position: absolute;
   top: 45%;
-  left: 0%;
+  left: 5%;
   color: #fcd043;
 }
 
@@ -12130,8 +12130,32 @@ h1, .h1 {
 #best-room {
   object-fit: contain;
   width: 100%;
-  max-width: 1920px;
-  min-width: 1400px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.label {
+  object-fit: contain;
+  width: 50%;
+  max-width: 150px;
+  min-width: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fcd043;
 }
 
 /*# sourceMappingURL=landing_page.css.map */
