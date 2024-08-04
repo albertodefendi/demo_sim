@@ -11871,7 +11871,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#container-1, #container-4 {
+#container-1,
+#container-4 {
   background-color: #313f38;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -11880,7 +11881,8 @@ textarea.form-control-lg {
   margin: 0 auto;
 }
 
-#container-2, #container-3 {
+#container-2,
+#container-3 {
   background-color: #fffcf6;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -11896,17 +11898,13 @@ nav {
 
 h1, .h1,
 h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+.h2 {
   font-family: "Poiret One", sans-serif;
   margin: 0;
+}
+
+h1, .h1 {
+  font-weight: bold;
 }
 
 .spacing {
@@ -11936,6 +11934,11 @@ h6,
 .navbar-toggler {
   background-color: transparent;
   border: none;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
 .circle-button {
@@ -12006,6 +12009,21 @@ h6,
 #quick-actions > :last-child,
 #quick-actions > :nth-child(2) {
   border-left: rgba(49, 63, 56, 0.5) solid 1px;
+}
+
+#best-apartments {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  color: #fcd043;
+}
+
+#best-apartments-description {
+  max-width: 33%;
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  color: #fcd043;
 }
 
 #logo {
@@ -12111,7 +12129,7 @@ h6,
 
 #best-room {
   object-fit: contain;
-  width: 30vw;
+  width: 100%;
   max-width: 1920px;
   min-width: 1400px;
 }

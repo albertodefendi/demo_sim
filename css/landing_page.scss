@@ -90,11 +90,13 @@ $accordion-button-active-color: $primary-color;
 
 // -------------------------------------------------------------------------------------------------------------
 
-#container-1, #container-4 {
+#container-1,
+#container-4 {
     @include body($primary-color, $primary-font, $white);
 }
 
-#container-2, #container-3 {
+#container-2,
+#container-3 {
     @include body($white, $primary-font, $primary-color);
 }
 
@@ -104,13 +106,13 @@ nav {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     font-family: $secondary-font;
     margin: 0;
+}
+
+h1 {
+    font-weight: bold;
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -142,6 +144,11 @@ h6 {
 .navbar-toggler {
     background-color: transparent;
     border: none;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
 }
 
 .circle-button {
@@ -215,6 +222,21 @@ h6 {
     }
 }
 
+#best-apartments {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    color: $secondary-color;
+}
+
+#best-apartments-description {
+    max-width: 33%;
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    color: $secondary-color;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 #logo {
@@ -248,7 +270,7 @@ h6 {
 }
 
 #img2 {
-    @include img(36vw, 350px,180px);
+    @include img(36vw, 350px, 180px);
 }
 
 #img3 {
@@ -272,5 +294,5 @@ h6 {
 }
 
 #best-room {
-    @include img(30vw, 1920px, 1400px);
+    @include img(100%, 1920px, 1400px);
 }
