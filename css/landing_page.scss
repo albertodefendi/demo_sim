@@ -301,6 +301,26 @@ h1 {
     @include img(50%, 150px, 50px);
 }
 
+#img8 {
+    @include img(16vw, 350px, 180px);
+}
+
+#img9 {
+    @include img(16vw, 550px, 300px);
+}
+
+#img10 {
+    @include img(30vw, 950px, 400px);
+}
+
+#img11 {
+    @include img(16vw, 500px, 275px);
+}
+
+#img12 {
+    @include img(16vw, 500px, 275px);
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 ::-webkit-scrollbar {
@@ -318,4 +338,26 @@ h1 {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: $secondary-color;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee h1 {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
