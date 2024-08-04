@@ -72,10 +72,11 @@ $accordion-button-active-color: $primary-color;
     min-height: $min-height;
 }
 
-@mixin img($width, $max-width) {
+@mixin img($width, $max-width, $min-width) {
     object-fit: contain;
     width: $width;
     max-width: $max-width;
+    min-width: $min-width;
 }
 
 @mixin body($background-color, $font, $color) {
@@ -89,15 +90,11 @@ $accordion-button-active-color: $primary-color;
 
 // -------------------------------------------------------------------------------------------------------------
 
-#container-1 {
+#container-1, #container-4 {
     @include body($primary-color, $primary-font, $white);
 }
 
-#container-2 {
-    @include body($white, $primary-font, $primary-color);
-}
-
-#container-3 {
+#container-2, #container-3 {
     @include body($white, $primary-font, $primary-color);
 }
 
@@ -222,7 +219,7 @@ h6 {
 
 #logo {
     // @include image("../assets/hotel_logo.png", 300px, auto, 150px, 150px, 600px, auto);
-    @include img(60vw, 300px);
+    @include img(60vw, 300px, 150px);
     margin-left: auto;
 }
 
@@ -247,29 +244,33 @@ h6 {
 }
 
 #img1 {
-    @include img(36vw, 550px);
+    @include img(36vw, 550px, 300px);
 }
 
 #img2 {
-    @include img(36vw, 350px);
+    @include img(36vw, 350px,180px);
 }
 
 #img3 {
-    @include img(36vw, 350px);
+    @include img(36vw, 350px, 180px);
 }
 
 #img4 {
-    @include img(36vw, 550px);
+    @include img(36vw, 550px, 300px);
 }
 
 #img5 {
-    @include img(36vw, 550px);
+    @include img(36vw, 550px, 250px);
 }
 
 #img6 {
-    @include img(50vw, 500px);
+    @include img(50vw, 500px, 275px);
 }
 
 #img7 {
-    @include img(36vw, 500px);
+    @include img(30vw, 500px, 275px);
+}
+
+#best-room {
+    @include img(30vw, 1920px, 1400px);
 }
