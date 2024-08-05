@@ -6,6 +6,7 @@
 $primary-color: #313f38;
 $secondary-color: #fcd043;
 $white: #fffcf6;
+$white-opacity-40: #fffcf656;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
 $quick-actions-color: #fcd043d7;
@@ -125,6 +126,10 @@ h1 {
     color: $white;
 }
 
+.white-color-opacity-40 {
+    color: $white-opacity-40;
+}
+
 .primary-color-background {
     background-color: $primary-color;
 }
@@ -179,17 +184,11 @@ h1 {
 // -------------------------------------------------------------------------------------------------------------
 
 #navbar-links-container {
-    justify-content: center !important;
     flex: 8;
-}
-
-#navbar-links > * {
-    padding: 0 20px;
 }
 
 #navbar-item-container {
     padding: 0 40px;
-    justify-content: space-between;
 }
 
 #facilities {
@@ -324,40 +323,66 @@ h1 {
 // -------------------------------------------------------------------------------------------------------------
 
 ::-webkit-scrollbar {
-	width: 7px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #252525;
+    background: #252525;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #555;
-	border-radius: 10px;
+    background: #555;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $secondary-color;
+    background: $secondary-color;
 }
 
-.marquee {
+// -------------------------------------------------------------------------------------------------------------
+
+.marquee-container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
 }
 
-.marquee h1 {
+.marquee-left, .marquee-right {
     display: inline-block;
-    padding-left: 100%;
-    animation: marquee 10s linear infinite;;
 }
 
-@keyframes marquee {
+.marquee-left {
+    animation: marquee-left 15s linear infinite;
+}
+
+.marquee-right {
+    animation: marquee-right 15s linear infinite;
+}
+
+.marquee-left,
+.marquee-right {
+    h1 {
+        display: inline;
+        margin: 0;
+        padding: 0 10px;
+    }
+}
+
+@keyframes marquee-left {
     0% {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
