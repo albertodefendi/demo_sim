@@ -11974,6 +11974,12 @@ h1, .h1 {
   border: solid 1px rgb(236, 236, 236);
 }
 
+.btn-group {
+  border: solid 1px #313f38;
+  height: 100px;
+  width: 50%;
+}
+
 #navbar-links-container {
   flex: 8;
 }
@@ -12169,6 +12175,13 @@ h1, .h1 {
 }
 
 #img12 {
+  object-fit: contain;
+  width: 16vw;
+  max-width: 500px;
+  min-width: 275px;
+}
+
+#img13 {
   object-fit: contain;
   width: 16vw;
   max-width: 500px;

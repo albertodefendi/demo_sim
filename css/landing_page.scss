@@ -182,6 +182,12 @@ h1 {
     border: solid 1px rgb(236, 236, 236);
 }
 
+.btn-group {
+    border: solid 1px $primary-color;
+    height: 100px;
+    width: 50%;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 #navbar-links-container {
@@ -318,6 +324,10 @@ h1 {
 }
 
 #img12 {
+    @include img(16vw, 500px, 275px);
+}
+
+#img13 {
     @include img(16vw, 500px, 275px);
 }
 
