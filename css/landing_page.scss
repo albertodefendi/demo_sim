@@ -98,7 +98,8 @@ $accordion-button-active-color: $primary-color;
 
 #container-2,
 #container-3,
-#container-5 {
+#container-5,
+#container-6 {
     @include body($white, $primary-font, $primary-color);
 }
 
