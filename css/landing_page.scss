@@ -35,8 +35,8 @@ $new-font-sizes: (
 $font-sizes: map-merge($font-sizes, $new-font-sizes);
 
 $new-container-max-widths: (
-    sm: 540px,
-    md: 720px,
+    sm: 640px,
+    md: 768px,
     lg: 1024px,
     xl: 1440px,
     xxl: 1720px
@@ -80,7 +80,7 @@ $accordion-button-active-color: $primary-color;
     min-width: $min-width;
 }
 
-@mixin body($background-color, $font, $color) {
+@mixin container($background-color, $font, $color) {
     background-color: $background-color;
     font-family: $font;
     letter-spacing: 0.5px;
@@ -90,18 +90,6 @@ $accordion-button-active-color: $primary-color;
 }
 
 // -------------------------------------------------------------------------------------------------------------
-
-#container-1,
-#container-4 {
-    @include body($primary-color, $primary-font, $white);
-}
-
-#container-2,
-#container-3,
-#container-5,
-#container-6 {
-    @include body($white, $primary-font, $primary-color);
-}
 
 nav {
     height: 50px;
@@ -118,7 +106,29 @@ h1 {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: $secondary-color;
+    transition-duration: 0.2s;
+}
+
+a:not(:hover) {
+    transition-duration: 0.2s;
+}
+
 // -------------------------------------------------------------------------------------------------------------
+
+.main-container {
+    @include container($primary-color, $primary-font, $white);
+}
+
+.secondary-container {
+    @include container($white, $primary-font, $primary-color);
+}
 
 .spacing {
     padding: 100px 0 100px 0;
@@ -187,6 +197,29 @@ h1 {
     border: solid 1px $primary-color;
     height: 100px;
     width: 50%;
+}
+
+.input-box {
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.arrow-button {
+    border: none;
+    background-color: transparent;
+}
+
+.form-input {
+    border-radius: 0;
+    flex-grow: 2;
+    border: none;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    box-shadow: none;
+    background-color: transparent;
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -309,27 +342,31 @@ h1 {
 }
 
 #img8 {
-    @include img(16vw, 350px, 180px);
+    @include img(16%, 350px, 180px);
 }
 
 #img9 {
-    @include img(16vw, 550px, 300px);
+    @include img(16%, 550px, 300px);
 }
 
 #img10 {
-    @include img(30vw, 950px, 400px);
+    @include img(30%, 950px, 400px);
 }
 
 #img11 {
-    @include img(16vw, 500px, 275px);
+    @include img(16%, 500px, 275px);
 }
 
 #img12 {
-    @include img(16vw, 500px, 275px);
+    @include img(16%, 500px, 275px);
 }
 
 #img13 {
-    @include img(16vw, 500px, 275px);
+    @include img(100%, 500px, 275px);
+}
+
+.arrow-button-img {
+    @include img(100%, 30px, 30px);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -351,6 +388,10 @@ h1 {
     background: $secondary-color;
 }
 
+::placeholder {
+    font-style: italic;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 .marquee-container {
@@ -360,7 +401,8 @@ h1 {
     box-sizing: border-box;
 }
 
-.marquee-left, .marquee-right {
+.marquee-left,
+.marquee-right {
     display: inline-block;
 }
 
