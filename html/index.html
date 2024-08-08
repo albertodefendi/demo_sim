@@ -141,7 +141,7 @@
                 <div class="d-flex justify-content-center align-items-start">
                     <img class="flex-2" id="img3" src="../assets/img3.png" alt="Interiors">
                 </div>
-                <div class="d-flex justify-content-end flex-column p-5" id="room-description">
+                <div class="d-flex justify-content-end flex-column p-5">
                     <div class="flex-1">
                         <h2 class="fs-5 mb-5">Superior Twin</h1>
                             <p>The Superior twin is perfect for those who plan to stay long. The spacious and bright
@@ -157,9 +157,9 @@
                                 <span>04</span>
                             </p>
                     </div>
-                    <div class="d-flex flex-1 py-5">
+                    <!-- <div class="d-flex flex-1 py-5">
                         <button class="circle-button"></button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="d-flex justify-content-center align-items-start">
                     <img class="flex-1" id="img4" src="../assets/img4.png" alt="Bed">
@@ -193,7 +193,7 @@
                         <img id="img6" src="../assets/img6.png" alt="Inside the kitchen">
                     </div>
                 </div>
-                <div class="d-flex flex-4 justify-content-end flex-column p-5" id="room-description">
+                <div class="d-flex flex-4 justify-content-end flex-column p-5">
                     <div class="mt-4">
                         <p>Bank Hotel offers you a wide range of additional services and facilities. Visit our
                             restaurant to try exclusive meals, book a conference hall to organize a business meeting, or
@@ -224,14 +224,14 @@
                     <div id="collapse-ice-restaurant" class="accordion-collapse collapse show"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body py-5">
-                            <div class="d-xl-flex" id="room-description">
+                            <div class="d-xl-flex">
                                 <div class="flex-2"></div>
-                                <div class="flex-1 d-flex flex-column justify-content-center">
+                                <div class="flex-2 d-flex flex-column justify-content-center">
                                     <p>The hotel's exclusive infrastructure is complemented by the unique atmosphere of
                                         the Safe Restaurant. Author's menu, extensive wine card, and live music will set
                                         you for the correct mood.</p>
                                 </div>
-                                <div class="flex-2 d-flex justify-content-center">
+                                <div class="flex-3 d-flex justify-content-center">
                                     <img id="img7" src="../assets/img7.png" alt="Ice Restaurant">
                                 </div>
                             </div>
@@ -249,15 +249,20 @@
                     <div class="d-flex hline mx-xl-5"></div>
                     <div id="collapse-conference-hall" class="accordion-collapse collapse"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div class="d-flex flex-4 justify-content-end flex-column p-3" id="room-description">
-                                <div class="mt-4">
-                                    <p>Bank Hotel offers you a wide range of additional services and facilities. Visit
-                                        our
-                                        restaurant to try exclusive meals, book a conference hall to organize a business
-                                        meeting, or
-                                        relax in the art-bar. </p>
+                        <div class="accordion-body py-5">
+                            <div class="d-xl-flex">
+                                <div class="flex-3 d-flex justify-content-center">
+                                    <img class="placeholder-img" src="../assets/placeholder.svg" alt="Conference Hall">
                                 </div>
+                                <div class="flex-2 d-flex flex-column justify-content-center">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="flex-2"></div>
                             </div>
                         </div>
                     </div>
@@ -271,14 +276,19 @@
                     </div>
                     <div class="d-flex hline mx-xl-5"></div>
                     <div id="collapse-wine-bar" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div class="d-flex flex-4 justify-content-end flex-column p-3" id="room-description">
-                                <div class="mt-4">
-                                    <p>Bank Hotel offers you a wide range of additional services and facilities. Visit
-                                        our
-                                        restaurant to try exclusive meals, book a conference hall to organize a business
-                                        meeting, or
-                                        relax in the art-bar. </p>
+                        <div class="accordion-body py-5">
+                            <div class="d-xl-flex">
+                                <div class="flex-2"></div>
+                                <div class="flex-2 d-flex flex-column justify-content-center">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="flex-3 d-flex justify-content-center">
+                                    <img class="placeholder-img" src="../assets/placeholder.svg" alt="Conference Hall">
                                 </div>
                             </div>
                         </div>
@@ -458,7 +468,8 @@
                         <div class="d-flex input-box">
                             <input type="email" class="form-control form-input" id="email" aria-describedby="emailHelp"
                                 placeholder="Your e-mail">
-                            <button type="button" class="arrow-button" id="newsletter-subscribe"><img class="arrow-button-img" src="../assets/arrow.svg" id="arrow-img"></button>
+                            <button type="button" class="arrow-button" id="newsletter-subscribe"><img
+                                    class="arrow-button-img" src="../assets/arrow.svg" id="arrow-img"></button>
                         </div>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </form>

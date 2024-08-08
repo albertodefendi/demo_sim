@@ -12229,6 +12229,13 @@ a:not(:hover) {
   min-width: 30px;
 }
 
+.placeholder-img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 400px;
+  min-width: 400px;
+}
+
 ::-webkit-scrollbar {
   width: 7px;
 }
