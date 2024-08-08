@@ -120,6 +120,11 @@ a:not(:hover) {
     transition-duration: 0.2s;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 .main-container {
@@ -205,11 +210,6 @@ a:not(:hover) {
     border-radius: 7px;
 }
 
-.arrow-button {
-    border: none;
-    background-color: transparent;
-}
-
 .form-input {
     border-radius: 0;
     flex-grow: 2;
@@ -220,6 +220,16 @@ a:not(:hover) {
 .form-input:focus {
     box-shadow: none;
     background-color: transparent;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.change-room-button {
+    border: 1px solid grey;
+    border-radius: 25px;
+    width: 45%;
 }
 
 // -------------------------------------------------------------------------------------------------------------
