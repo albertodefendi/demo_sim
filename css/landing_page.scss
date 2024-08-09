@@ -181,17 +181,10 @@ button {
     background-color: transparent;
 }
 
-.flex-1 {
-    flex: 1;
-}
-.flex-2 {
-    flex: 2;
-}
-.flex-3 {
-    flex: 3;
-}
-.flex-4 {
-    flex: 4;
+@for $i from 1 through 4 {
+    .flex-#{$i} {
+        flex: $i;
+    }
 }
 
 .hline {
@@ -325,11 +318,11 @@ button {
 }
 
 #img1 {
-    @include img(36vw, 550px, 300px);
+    @include img(80vw, 100%, 300px);
 }
 
 #img2 {
-    @include img(36vw, 350px, 180px);
+    @include img(60vw, 100%, 120px);
 }
 
 #img3 {
