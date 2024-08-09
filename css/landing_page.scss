@@ -215,11 +215,11 @@ button {
     flex-grow: 2;
     border: none;
     background-color: transparent;
-}
 
-.form-input:focus {
-    box-shadow: none;
-    background-color: transparent;
+    &:focus {
+        box-shadow: none;
+        background-color: transparent;
+    }
 }
 
 .accordion-button:focus {
@@ -227,9 +227,18 @@ button {
 }
 
 .change-room-button {
-    border: 1px solid grey;
+    border: 1px solid $primary-color;
     border-radius: 25px;
     width: 45%;
+
+    &:active {
+        transform: scale(0.95);
+        transition-duration: 0.1s;
+    }
+
+    &:hover {
+        background-color: rgb(238, 238, 238);
+    }
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -452,5 +461,13 @@ button {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+@media (max-width: 480px) {
+    .d-480-none {
+        display: none !important;
     }
 }

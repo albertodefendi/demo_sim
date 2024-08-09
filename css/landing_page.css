@@ -12008,7 +12008,6 @@ button {
   border: none;
   background-color: transparent;
 }
-
 .form-input:focus {
   box-shadow: none;
   background-color: transparent;
@@ -12019,9 +12018,16 @@ button {
 }
 
 .change-room-button {
-  border: 1px solid grey;
+  border: 1px solid #313f38;
   border-radius: 25px;
   width: 45%;
+}
+.change-room-button:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+.change-room-button:hover {
+  background-color: rgb(238, 238, 238);
 }
 
 #navbar-links-container {
@@ -12309,6 +12315,11 @@ button {
   }
   100% {
     transform: translateX(0%);
+  }
+}
+@media (max-width: 480px) {
+  .d-480-none {
+    display: none !important;
   }
 }
 

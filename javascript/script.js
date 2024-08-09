@@ -7,3 +7,10 @@ newsletterButton.addEventListener("click", () => {
         arrowImg.src = "../assets/arrow.svg";
     }, 2000);
 })
+
+// -------------------------------------------------------------------------------------------------------------
+
+let previousRoomButton = document.getElementById("previous-room-button");
+let nextRoomButton = document.getElementById("next-room-button");
+
+previousRoomButton.addEventListener("click", )
