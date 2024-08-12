@@ -11962,14 +11962,6 @@ button {
   display: inline-block;
 }
 
-.circle-button {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  border: solid 1px #313f38;
-  background-color: transparent;
-}
-
 .flex-1 {
   flex: 1;
 }
@@ -11988,11 +11980,6 @@ button {
 
 .hline {
   border: solid 1px rgb(236, 236, 236);
-}
-
-.btn-group {
-  border: solid 1px #313f38;
-  height: 100px;
 }
 
 .input-box {
@@ -12204,16 +12191,16 @@ button {
 
 #gallery-1 {
   object-fit: contain;
-  width: 16%;
-  max-width: 350px;
-  min-width: 180px;
+  width: 40%;
+  max-width: 50vw;
+  min-width: 30%;
 }
 
 #gallery-2 {
   object-fit: contain;
-  width: 16%;
-  max-width: 550px;
-  min-width: 300px;
+  width: 20%;
+  max-width: 50vw;
+  min-width: 50%;
 }
 
 #gallery-3 {
@@ -12316,9 +12303,55 @@ button {
     transform: translateX(0%);
   }
 }
+.multi-button {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  width: 50%;
+}
+
+.multi-button button {
+  color: #313f38;
+  background-color: #fffcf6;
+  border: 1px solid #313f38;
+  padding: 0.8888888889rem 1rem 1rem;
+  position: relative;
+  flex-grow: 1;
+  transition: flex-grow 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+}
+
+.multi-button button + button {
+  border-left: 1px solid #313f38;
+  margin-left: -1px;
+}
+
+.multi-button button:hover {
+  flex-grow: 2;
+  color: #fcd043;
+  background-color: #313f38;
+}
+
+.multi-button button:active {
+  transform: translateY(0.125rem);
+}
+
 @media (max-width: 480px) {
   .d-480-none {
     display: none !important;
+  }
+  .d-1200-none {
+    display: none !important;
+  }
+}
+@media (max-width: 1200px) {
+  .d-1200-none {
+    display: none !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 1200px) {
+  .input-box {
+    max-width: 70%;
   }
 }
 

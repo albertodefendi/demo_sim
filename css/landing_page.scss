@@ -173,14 +173,6 @@ button {
     display: inline-block;
 }
 
-.circle-button {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    border: solid 1px $primary-color;
-    background-color: transparent;
-}
-
 @for $i from 1 through 4 {
     .flex-#{$i} {
         flex: $i;
@@ -189,12 +181,6 @@ button {
 
 .hline {
     border: solid 1px rgb(236, 236, 236);
-}
-
-.btn-group {
-    border: solid 1px $primary-color;
-    height: 100px;
-    // width: 50%;
 }
 
 .input-box {
@@ -292,7 +278,6 @@ button {
 // -------------------------------------------------------------------------------------------------------------
 
 #logo {
-    // @include image("../assets/hotel_logo.png", 300px, auto, 150px, 150px, 600px, auto);
     @include img(60vw, 300px, 150px);
     margin-left: auto;
 }
@@ -321,7 +306,7 @@ button {
     @include img(80vw, 100%, 300px);
 }
 
-#hall-img-2{
+#hall-img-2 {
     @include img(60vw, 100%, 120px);
 }
 
@@ -357,12 +342,16 @@ button {
     @include img(30%, 100vw, 100%);
 }
 
+// #gallery-1 {
+//     @include img(16%, 350px, 180px);
+// }
+
 #gallery-1 {
-    @include img(16%, 350px, 180px);
+    @include img(40%, 50vw, 30%);
 }
 
 #gallery-2 {
-    @include img(16%, 550px, 300px);
+    @include img(20%, 50vw, 50%);
 }
 
 #gallery-3 {
@@ -459,8 +448,64 @@ button {
 
 // -------------------------------------------------------------------------------------------------------------
 
+$border-size: 0.125rem;
+$duration: 250ms;
+$ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+$space: 1rem;
+
+.multi-button {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    width: 50%;
+}
+
+.multi-button button {
+    color: $primary-color;
+    background-color: $white;
+    border: 1px solid $primary-color;
+    padding: $space / 1.125 $space $space;
+    position: relative;
+    flex-grow: 1;
+    transition: flex-grow $duration $ease;
+    cursor: pointer;
+}
+
+.multi-button button + button {
+    border-left: 1px solid $primary-color;
+    margin-left: 1px * -1;
+}
+
+.multi-button button:hover {
+    flex-grow: 2;
+    color: $secondary-color;
+    background-color: $primary-color;
+}
+
+.multi-button button:active {
+    transform: translateY($border-size);
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
 @media (max-width: 480px) {
     .d-480-none {
         display: none !important;
+    }
+
+    .d-1200-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .d-1200-none {
+        display: none !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+    .input-box {
+        max-width: 70%;
     }
 }
