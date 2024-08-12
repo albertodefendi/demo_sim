@@ -47,8 +47,8 @@ function changeRoom(direction)
         roomNumber++;
         newRoom = roomsArray[roomNumber];
     }
-    document.getElementById("room-preview-img-1").childNodes[1].src = newRoom.firstImgSrc;
-    document.getElementById("room-preview-img-2").childNodes[1].src = newRoom.secondImgSrc;
+    document.getElementById("superior-twin-1").src = newRoom.firstImgSrc;
+    document.getElementById("superior-twin-2").src = newRoom.secondImgSrc;
     document.getElementById("room-preview-title").innerText = newRoom.title;
     document.getElementById("room-preview-description").innerText = newRoom.description;
     document.getElementById("room-preview-state").innerText = "0" + (roomNumber + 1);
