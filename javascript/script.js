@@ -20,9 +20,9 @@ class roomPreview {
 }
 
 let superiorTwin = new roomPreview("../assets/superior_twin_1.png", "../assets/superior_twin_2.png", "Superior Twin", "The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city.Stylish interior design and comfortable beds will make your stay cozy and pleasant")
-let suite2 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-let suite3 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-let suite4 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+let suite2 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+let suite3 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+let suite4 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
 
 let roomsArray = [superiorTwin, suite2, suite3, suite4];
 
@@ -63,3 +63,5 @@ previousRoomButton.addEventListener("click", () => {
 nextRoomButton.addEventListener("click", () => {
     changeRoom("next")
 });
+
+// -------------------------------------------------------------------------------------------------------------

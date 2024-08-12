@@ -194,7 +194,7 @@ button {
 .btn-group {
     border: solid 1px $primary-color;
     height: 100px;
-    width: 50%;
+    // width: 50%;
 }
 
 .input-box {
@@ -317,11 +317,11 @@ button {
     @include image("../assets/bed.svg", 40px, 40px);
 }
 
-#img1 {
+#hall-img-1 {
     @include img(80vw, 100%, 300px);
 }
 
-#img2 {
+#hall-img-2{
     @include img(60vw, 100%, 120px);
 }
 
@@ -333,15 +333,15 @@ button {
     @include img(36vw, 550px, 300px);
 }
 
-#img5 {
+#bartender {
     @include img(36vw, 550px, 250px);
 }
 
-#img6 {
+#kitchen {
     @include img(50vw, 500px, 275px);
 }
 
-#img7 {
+#restaurant {
     @include img(30vw, 500px, 275px);
 }
 
@@ -353,27 +353,27 @@ button {
     @include img(50%, 150px, 50px);
 }
 
-#img8 {
+#main-gallery {
+    @include img(30%, 100vw, 100%);
+}
+
+#gallery-1 {
     @include img(16%, 350px, 180px);
 }
 
-#img9 {
+#gallery-2 {
     @include img(16%, 550px, 300px);
 }
 
-#img10 {
-    @include img(30%, 950px, 400px);
-}
-
-#img11 {
+#gallery-3 {
     @include img(16%, 500px, 275px);
 }
 
-#img12 {
+#gallery-4 {
     @include img(16%, 500px, 275px);
 }
 
-#img13 {
+#contacts-img {
     @include img(100%, 500px, 275px);
 }
 
