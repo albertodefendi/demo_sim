@@ -29,64 +29,37 @@ let roomsArray = [superiorTwin, suite2, suite3, suite4];
 function changeRoom(direction) 
 {   
     let newRoom;
-    let roomNumber = document.getElementById("room-preview-state").textContent;
+    let roomNumber = Number(document.getElementById("room-preview-state").textContent) - 1;
 
     if (direction == "previous")
     {
-        if (roomNumber == 1)
-            roomNumber = roomsArray.length + 1;
+        if (roomNumber == 0)
+            roomNumber = roomsArray.length;
         
         roomNumber--;
-        newRoom = roomsArray[roomNumber]
+        newRoom = roomsArray[roomNumber];
     }
     else if (direction == "next")
     {
-        if (roomNumber == roomsArray.length)
+        if (roomNumber == roomsArray.length - 1)
             roomNumber = -1;
         
         roomNumber++;
-        newRoom = roomsArray[roomNumber]
+        newRoom = roomsArray[roomNumber];
     }
-    document.getElementById("room-preview-img-1").src = newRoom.firstImgSrc;
-    document.getElementById("room-preview-img-2").src = newRoom.secondImgSrc;
+    document.getElementById("room-preview-img-1").childNodes[1].src = newRoom.firstImgSrc;
+    document.getElementById("room-preview-img-2").childNodes[1].src = newRoom.secondImgSrc;
     document.getElementById("room-preview-title").innerText = newRoom.title;
     document.getElementById("room-preview-description").innerText = newRoom.description;
+    document.getElementById("room-preview-state").innerText = "0" + (roomNumber + 1);
 }
 
 let previousRoomButton = document.getElementById("previous-room-button");
 let nextRoomButton = document.getElementById("next-room-button");
 
-// previousRoomButton.addEventListener("click", changeRoom("previous"))
-// nextRoomButton.addEventListener("click", changeRoom("next"))
-
 previousRoomButton.addEventListener("click", () => {
-    let newRoom;
-    let roomNumber = document.getElementById("room-preview-state").textContent;
-
-    if (roomNumber == 1)
-        roomNumber = roomsArray.length + 1;
-    
-    roomNumber--;
-    newRoom = roomsArray[roomNumber]
-
-    document.getElementById("room-preview-img-1").src = newRoom.firstImgSrc;
-    document.getElementById("room-preview-img-2").src = newRoom.secondImgSrc;
-    document.getElementById("room-preview-title").innerText = newRoom.title;
-    document.getElementById("room-preview-description").innerText = newRoom.description;
-})
-
+    changeRoom("previous")
+});
 nextRoomButton.addEventListener("click", () => {
-    let newRoom;
-    let roomNumber = document.getElementById("room-preview-state").textContent;
-
-    if (roomNumber == roomsArray.length)
-        roomNumber = -1;
-    
-    roomNumber++;
-    newRoom = roomsArray[roomNumber]
-
-    document.getElementById("room-preview-img-1").src = newRoom.firstImgSrc;
-    document.getElementById("room-preview-img-2").src = newRoom.secondImgSrc;
-    document.getElementById("room-preview-title").innerText = newRoom.title;
-    document.getElementById("room-preview-description").innerText = newRoom.description;
-})
+    changeRoom("next")
+});
