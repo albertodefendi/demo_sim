@@ -9,7 +9,6 @@ $white: #fffcf6;
 $white-opacity-40: #fffcf656;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
-$quick-actions-color: #fcd043d7;
 
 // -------------------------------------------------------------------------------------------------------------
 
@@ -206,9 +205,11 @@ button {
 }
 
 .change-room-button {
+    background-color: white;
     border: 1px solid $primary-color;
     border-radius: 25px;
     width: 45%;
+    box-shadow: 0px 3px 6px #9e9e9e;
 
     &:active {
         transform: scale(0.95);
@@ -241,23 +242,7 @@ button {
 }
 
 #quick-actions {
-    background-color: $quick-actions-color;
-    height: 7rem;
-    div {
-        p {
-            font-weight: 700;
-            color: $primary-color;
-            margin: 0;
-        }
-    }
-    > :first-child,
-    > :nth-child(2) {
-        border-right: rgba($primary-color, 0.5) solid 1px;
-    }
-    > :last-child,
-    > :nth-child(2) {
-        border-left: rgba($primary-color, 0.5) solid 1px;
-    }
+    height: 100px;
 }
 
 #best-apartments {
@@ -453,47 +438,61 @@ $duration: 250ms;
 $ease: cubic-bezier(0.215, 0.61, 0.355, 1);
 $space: 1rem;
 
-.multi-button {
+@mixin multi-button($width, $height, $color, $background-color, $hover-background-color, $hover-color) {
     display: flex;
-    width: 100%;
-    height: 80px;
-    width: 50%;
+    width: $width;
+    height: $height;
+    box-shadow: 0px 3px 6px #9e9e9e;
+    
+    button {
+        color: $color;
+        background-color: $background-color;
+        border: 1px solid $color;
+        padding: $space / 1.125 $space $space;
+        position: relative;
+        flex-grow: 1;
+        transition: flex-grow $duration $ease;
+        cursor: pointer;
+
+        &:hover {
+            flex-grow: 2;
+            color: $hover-color;
+            background-color: $hover-background-color;
+        }
+
+        &:active {
+            transform: translateY($border-size);
+        }
+
+        & + button {
+            border-left: 1px solid $color;
+            margin-left: -1px;
+        }
+    }
 }
 
-.multi-button button {
-    color: $primary-color;
-    background-color: $white;
-    border: 1px solid $primary-color;
-    padding: $space / 1.125 $space $space;
-    position: relative;
-    flex-grow: 1;
-    transition: flex-grow $duration $ease;
-    cursor: pointer;
+#header-multi-button {
+    @include multi-button(100%, 100%, $primary-color, $secondary-color, $secondary-color, $white);
+    box-shadow: none;
+
+    button {
+        border-left: none;
+        border-right: none;
+
+        &:active {
+            transform: none;
+        }
+    }
 }
 
-.multi-button button + button {
-    border-left: 1px solid $primary-color;
-    margin-left: 1px * -1;
-}
-
-.multi-button button:hover {
-    flex-grow: 2;
-    color: $secondary-color;
-    background-color: $primary-color;
-}
-
-.multi-button button:active {
-    transform: translateY($border-size);
+#contacts-multi-button {
+    @include multi-button(50%, 80px, $primary-color, white, $primary-color, $secondary-color);
 }
 
 // -------------------------------------------------------------------------------------------------------------
 
 @media (max-width: 480px) {
     .d-480-none {
-        display: none !important;
-    }
-
-    .d-1200-none {
         display: none !important;
     }
 }
