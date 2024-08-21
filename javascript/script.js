@@ -1,3 +1,4 @@
+//Gestione dell'icona di conferma sottoscrizione alla newsletter
 let newsletterButton = document.getElementById("newsletter-subscribe");
 newsletterButton.addEventListener("click", () => {
     document.getElementById("email").value = "";
@@ -10,6 +11,7 @@ newsletterButton.addEventListener("click", () => {
 
 // -------------------------------------------------------------------------------------------------------------
 
+//Carosello stanze
 class roomPreview {
     constructor(firstImgSrc, secondImgSrc, title, description) {
         this.firstImgSrc = firstImgSrc;
