@@ -12310,7 +12310,7 @@ button {
 }
 #header-multi-button button:hover {
   flex-grow: 2;
-  color: #fffcf6;
+  color: #313f38;
   background-color: #fcd043;
 }
 #header-multi-button button:active {
@@ -12321,11 +12321,14 @@ button {
   margin-left: -1px;
 }
 #header-multi-button button {
-  border-left: none;
-  border-right: none;
+  font-weight: bold;
+  border-top: none;
 }
-#header-multi-button button:active {
-  transform: none;
+#header-multi-button button:first-of-type {
+  border-left: none;
+}
+#header-multi-button button:last-of-type {
+  border-right: none;
 }
 
 #contacts-multi-button {

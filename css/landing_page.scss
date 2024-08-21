@@ -472,15 +472,19 @@ $space: 1rem;
 }
 
 #header-multi-button {
-    @include multi-button(100%, 100%, $primary-color, $secondary-color, $secondary-color, $white);
+    @include multi-button(100%, 100%, $primary-color, $secondary-color, $secondary-color, $primary-color);
     box-shadow: none;
-
+    
     button {
-        border-left: none;
-        border-right: none;
+        font-weight: bold;
+        border-top: none;
 
-        &:active {
-            transform: none;
+        &:first-of-type {
+            border-left: none;
+        }
+
+        &:last-of-type {
+            border-right: none;
         }
     }
 }
