@@ -12018,6 +12018,10 @@ button {
   background-color: rgb(238, 238, 238);
 }
 
+.m-0-auto {
+  margin: 0 auto;
+}
+
 #navbar-links-container {
   flex: 8;
 }
