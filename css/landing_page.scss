@@ -476,7 +476,7 @@ $space: 1rem;
 }
 
 #header-multi-button {
-    @include multi-button(100%, 100%, $primary-color, $secondary-color, $secondary-color, $primary-color);
+    @include multi-button(100%, auto, $primary-color, $secondary-color, $secondary-color, $primary-color);
     box-shadow: none;
     
     button {
@@ -508,6 +508,10 @@ $space: 1rem;
 @media (max-width: 1200px) {
     .d-1200-none {
         display: none !important;
+    }
+
+    #contacts-multi-button {
+        width: 100%;
     }
 }
 
