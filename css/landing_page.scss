@@ -52,44 +52,6 @@ $accordion-button-active-color: $primary-color;
 
 // -------------------------------------------------------------------------------------------------------------
 
-@mixin image(
-    $image-url,
-    $width: auto,
-    $height: auto,
-    $max-width: auto,
-    $max-height: auto,
-    $min-width: auto,
-    $min-height: auto
-) {
-    background-image: url($image-url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: $width;
-    height: $height;
-    max-width: $max-width;
-    max-height: $max-height;
-    min-width: $min-width;
-    min-height: $min-height;
-}
-
-@mixin img($width, $max-width, $min-width) {
-    object-fit: contain;
-    width: $width;
-    max-width: $max-width;
-    min-width: $min-width;
-}
-
-@mixin container($background-color, $font, $color) {
-    background-color: $background-color;
-    font-family: $font;
-    letter-spacing: 0.5px;
-    font-weight: 300;
-    color: $color;
-    margin: 0 auto;
-}
-
-// -------------------------------------------------------------------------------------------------------------
-
 nav {
     height: 50px;
     padding: 40px 0 !important;
@@ -125,6 +87,15 @@ button {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+
+@mixin container($background-color, $font, $color) {
+    background-color: $background-color;
+    font-family: $font;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    color: $color;
+    margin: 0 auto;
+}
 
 .main-container {
     @include container($primary-color, $primary-font, $white);
@@ -172,7 +143,7 @@ button {
     display: inline-block;
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 8 {
     .flex-#{$i} {
         flex: $i;
     }
@@ -227,28 +198,6 @@ button {
 
 // -------------------------------------------------------------------------------------------------------------
 
-#navbar-links-container {
-    flex: 8;
-}
-
-#navbar-item-container {
-    padding: 0 40px;
-}
-
-#facilities {
-    padding: 0 9px;
-    color: $secondary-color;
-}
-
-#brief {
-    max-width: 70%;
-    margin-left: auto;
-}
-
-#quick-actions {
-    height: 100px;
-}
-
 #best-apartments {
     position: absolute;
     top: 5%;
@@ -265,6 +214,33 @@ button {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+
+@mixin image(
+    $image-url,
+    $width: auto,
+    $height: auto,
+    $max-width: auto,
+    $max-height: auto,
+    $min-width: auto,
+    $min-height: auto
+) {
+    background-image: url($image-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $width;
+    height: $height;
+    max-width: $max-width;
+    max-height: $max-height;
+    min-width: $min-width;
+    min-height: $min-height;
+}
+
+@mixin img($width, $max-width, $min-width) {
+    object-fit: contain;
+    width: $width;
+    max-width: $max-width;
+    min-width: $min-width;
+}
 
 #logo {
     @include img(60vw, 300px, 150px);

@@ -11978,6 +11978,22 @@ button {
   flex: 4;
 }
 
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
+}
+
+.flex-7 {
+  flex: 7;
+}
+
+.flex-8 {
+  flex: 8;
+}
+
 .hline {
   border: solid 1px rgb(236, 236, 236);
 }
@@ -12020,28 +12036,6 @@ button {
 
 .m-0-auto {
   margin: 0 auto;
-}
-
-#navbar-links-container {
-  flex: 8;
-}
-
-#navbar-item-container {
-  padding: 0 40px;
-}
-
-#facilities {
-  padding: 0 9px;
-  color: #fcd043;
-}
-
-#brief {
-  max-width: 70%;
-  margin-left: auto;
-}
-
-#quick-actions {
-  height: 100px;
 }
 
 #best-apartments {
