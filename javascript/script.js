@@ -65,3 +65,11 @@ nextRoomButton.addEventListener("click", () => {
 });
 
 // -------------------------------------------------------------------------------------------------------------
+
+// Hamburger menu switch
+function switchHamburger() {
+    document.getElementById("hamburger").classList.toggle("change");
+    document.getElementById("nav-main-link").classList.toggle("hidden");
+}
+
+// -------------------------------------------------------------------------------------------------------------

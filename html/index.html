@@ -17,10 +17,10 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-xl sticky-top primary-color-background">
-        <div class="container-fluid px-5">
-            <div class="d-flex flex-1 justify-content-between" id="navbar-name-container">
-                <a class="nav-link white-color fw-bold" href="#" id="navbar-name">BANKHOTEL</a>
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container-fluid d-flex px-5 py-3">
+            <div class="flex-1" id="nav-main-link">
+                <a class="nav-link white-color fw-bold" href="#">BANKHOTEL</a>
             </div>
             <div class="collapse navbar-collapse justify-content-center flex-8" id="navbar-links-container">
                 <ul class="navbar-nav" id="navbar-links">
@@ -41,406 +41,415 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex flex-1 justify-content-end" id="navbar-button-container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <div class="flex-1 text-end">
+                <div class="hamburger p-2 navbar-toggler collapsed" data-bs-toggle="collapse"
                     data-bs-target="#navbar-links-container" aria-controls="navbar-links-container"
-                    aria-expanded="false" aria-label="Toggle navigation" id="navbar-button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    aria-expanded="false" aria-label="Toggle navigation" onclick="switchHamburger()" id="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
-        </div>
         </div>
     </nav>
 
-    <div class="main-container" id="header">
-        <div class="container-xl d-xl-flex flex-column">
-            <div class="d-xl-flex align-items-center pt-5 pb-5">
-                <div class="flex-2">
-                    <h1 class="fs-1"><span class="d-inline-block white-color">BANK</span><span
-                            class="d-inline-block secondary-color">HOTEL</span>
-                    </h1>
-                    <p class="my-5 fs-6">rooms // restaurant // congress hall // wine bar</p>
+    <div>
+        <div class="main-container" id="header">
+            <div class="container-xl d-xl-flex flex-column">
+                <div class="d-xl-flex align-items-center pt-5 pb-5">
+                    <div class="flex-2">
+                        <h1 class="fs-1"><span class="d-inline-block white-color">BANK</span><span
+                                class="d-inline-block secondary-color">HOTEL</span>
+                        </h1>
+                        <p class="my-5 fs-6">rooms // restaurant // congress hall // wine bar</p>
+                    </div>
+                    <div class="flex-1 d-flex flex-column">
+                        <img class="flex-1" id="logo" src="../assets/hotel_logo.png" alt="Logo">
+                        <p class="flex-1 text-end">The luxurious hotel in the most beautiful European city with
+                            an
+                            exclusive
+                            restaurant, conference-hall, and art-bar.</p>
+                    </div>
+                    <div></div>
                 </div>
-                <div class="flex-1 d-flex flex-column">
-                    <img class="flex-1" id="logo" src="../assets/hotel_logo.png" alt="Logo">
-                    <p class="flex-1 text-end">The luxurious hotel in the most beautiful European city with
-                        an
-                        exclusive
-                        restaurant, conference-hall, and art-bar.</p>
-                </div>
-                <div></div>
-            </div>
-            <div id="rooms-image">
-                <div class="d-flex align-items-center primary-color-background" id="quick-actions">
-                    <div class="multi-button" id="header-multi-button">
-                        <button type="button">
-                            <span>CHECK IN</span>
-                            <div class="svg-icon mt-2 m-0-auto" id="icon-in"></div>
-                        </button>
-                        <button type="button">
-                            <span>CHECK OUT</span>
-                            <div class="svg-icon mt-2 m-0-auto" id="icon-out"></div>
-                        </button>
-                        <button type="button">
-                            <span>BOOK ROOM</span>
-                            <div class="svg-icon mt-2 m-0-auto" id="icon-bed"></div>
-                        </button>
+                <div id="rooms-image">
+                    <div class="d-flex align-items-center primary-color-background" id="quick-actions">
+                        <div class="multi-button" id="header-multi-button">
+                            <button type="button">
+                                <span>CHECK IN</span>
+                                <div class="svg-icon mt-2 m-0-auto" id="icon-in"></div>
+                            </button>
+                            <button type="button">
+                                <span>CHECK OUT</span>
+                                <div class="svg-icon mt-2 m-0-auto" id="icon-out"></div>
+                            </button>
+                            <button type="button">
+                                <span>BOOK ROOM</span>
+                                <div class="svg-icon mt-2 m-0-auto" id="icon-bed"></div>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex">
-                <div class="d-flex flex-column flex-fill">
-                    <div class="text-start">Tel: +38 032 297 50 20</div>
-                    <div class="text-start">Address: 8 Lystopadovoho Chynu, Lviv</div>
-                </div>
-                <div class="flex-fill text-end fst-italic fw-semibold">ART & CONGRESS HALL</div>
-            </div>
-            <div class="spacing"></div>
-            <div class="d-md-flex pt-5 pb-5">
-                <div class="d-flex justify-content-center">
-                    <img class="flex-1" id="hall-img-1" src="../assets/hall_img_1.png" alt="Hall">
-                </div>
-                <div class="flex-fill d-flex justify-content-center flex-column p-5">
-                    <h1 class="fs-2 text-end mb-4"><span class="secondary-color d-block">ABOUT </span><span
-                            class="d-block">US</span>
-                    </h1>
-                    <div class="mt-4">
-                        <h2 class="fs-4 mb-5">High Quality</h1>
-                            <p>The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated and
-                                modernized to meet the expectations of the most demanding guests. We offer luxurious
-                                rooms,
-                                numerous facilities, and exceptional service</p>
+                <div class="d-flex">
+                    <div class="d-flex flex-column flex-fill">
+                        <div class="text-start">Tel: +38 032 297 50 20</div>
+                        <div class="text-start">Address: 8 Lystopadovoho Chynu, Lviv</div>
                     </div>
+                    <div class="flex-fill text-end fst-italic fw-semibold">ART & CONGRESS HALL</div>
                 </div>
-                <div class="d-flex justify-content-center d-480-none">
-                    <img class="flex-1" id="hall-img-2" src="../assets/hall_img_2.png" alt="Hall">
+                <div class="spacing"></div>
+                <div class="d-md-flex pt-5 pb-5">
+                    <div class="d-flex justify-content-center">
+                        <img class="flex-1" id="hall-img-1" src="../assets/hall_img_1.png" alt="Hall">
+                    </div>
+                    <div class="flex-fill d-flex justify-content-center flex-column p-5">
+                        <h1 class="fs-2 text-end mb-4"><span class="secondary-color d-block">ABOUT </span><span
+                                class="d-block">US</span>
+                        </h1>
+                        <div class="mt-4">
+                            <h2 class="fs-4 mb-5">High Quality</h1>
+                                <p>The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated
+                                    and
+                                    modernized to meet the expectations of the most demanding guests. We offer luxurious
+                                    rooms,
+                                    numerous facilities, and exceptional service</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center d-480-none">
+                        <img class="flex-1" id="hall-img-2" src="../assets/hall_img_2.png" alt="Hall">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ------------------------------------------------------------------------------------------------------------- -->
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-    <div class="secondary-container" id="rooms-and-apartments">
-        <div class="spacing"></div>
-        <div class="container-xl d-flex flex-column">
-            <div class="d-xl-flex py-5">
-                <div class="flex-3 text-start">
-                    <h1 class="fs-3">ROOMS<br>& APARTMENTS</h1>
+        <div class="secondary-container" id="rooms-and-apartments">
+            <div class="spacing"></div>
+            <div class="container-xl d-flex flex-column">
+                <div class="d-xl-flex py-5">
+                    <div class="flex-3 text-start">
+                        <h1 class="fs-3">ROOMS<br>& APARTMENTS</h1>
+                    </div>
+                    <div class="flex-1 text-start">
+                        <p class="fs-7">ALL ROOM DECORATION WAS MADE WITH ECOLOGICAL CERTIFIED AND SAFE MATERIAL</p>
+                    </div>
                 </div>
-                <div class="flex-1 text-start">
-                    <p class="fs-7">ALL ROOM DECORATION WAS MADE WITH ECOLOGICAL CERTIFIED AND SAFE MATERIAL</p>
+                <div class="d-xl-flex py-5" id="room-preview">
+                    <div class="d-flex justify-content-center align-items-start d-1200-none" id="room-preview-img-1">
+                        <img class="flex-2" id="superior-twin-1" src="../assets/superior_twin_1.png" alt="Interiors">
+                    </div>
+                    <div class="d-flex justify-content-end flex-column m-5">
+                        <div class="flex-1">
+                            <h2 class="fs-5 mb-5" id="room-preview-title">Superior Twin</h2>
+                            <p id="room-preview-description">The Superior twin is perfect for those who plan to stay
+                                long.
+                                The spacious and bright
+                                room is
+                                equipped with deluxe Italian furniture and has a beautiful view to the historical part
+                                of
+                                the
+                                city. Stylish interior design and comfortable beds will make your stay cozy and pleasant
+                            </p>
+                            <p>
+                                <span class="fw-bold" id="room-preview-state">01</span>
+                                <span class="ps-3 pe-3">/</span>
+                                <span>04</span>
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <button class="my-5 py-2 change-room-button" type="button" id="previous-room-button">
+                                    <div class="d-flex justify-content-center align-items-center px-2">
+                                        <img class="arrow-button-img" src="../assets/arrow.svg" style="rotate: 180deg;">
+                                        <div class="d-inline d-480-none">See previous room</div>
+                                    </div>
+                                </button>
+                                <button class="my-5 py-2 change-room-button" type="button" id="next-room-button">
+                                    <div class="d-flex justify-content-center align-items-center px-2">
+                                        <div class="d-inline d-480-none">See next room</div>
+                                        <img class="arrow-button-img" src="../assets/arrow.svg">
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-start" id="room-preview-img-2">
+                        <img class="flex-1" id="superior-twin-2" src="../assets/superior_twin_2.png" alt="Bed">
+                    </div>
                 </div>
             </div>
-            <div class="d-xl-flex py-5" id="room-preview">
-                <div class="d-flex justify-content-center align-items-start d-1200-none" id="room-preview-img-1">
-                    <img class="flex-2" id="superior-twin-1" src="../assets/superior_twin_1.png" alt="Interiors">
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="secondary-container" id="our-facilities">
+            <div class="spacing"></div>
+            <div class="container-xl d-flex flex-column">
+                <div class="d-md-flex py-5">
+                    <div class="flex-2 text-start">
+                        <p class="fs-7 fst-italic fw-semibold">ART & CONGRESS HALL</p>
+                    </div>
+                    <div class="flex-3 text-start py-4 d-flex justify-content-center">
+                        <h1 class="fs-3">OUR<br>FACILITIES</h1>
+                    </div>
+                    <div class="d-flex flex-1 justify-content-center">
+                        <img id="bartender" src="../assets/bartender.png" alt="Our bartender">
+                    </div>
                 </div>
-                <div class="d-flex justify-content-end flex-column m-5">
-                    <div class="flex-1">
-                        <h2 class="fs-5 mb-5" id="room-preview-title">Superior Twin</h2>
-                        <p id="room-preview-description">The Superior twin is perfect for those who plan to stay long.
-                            The spacious and bright
-                            room is
-                            equipped with deluxe Italian furniture and has a beautiful view to the historical part
+                <div class="d-md-flex py-5">
+                    <div class="d-flex flex-1 flex-column justify-content-center">
+                        <div class="d-flex flex-1 justify-content-center">
+                            <img id="kitchen" src="../assets/kitchen.png" alt="Inside the kitchen">
+                        </div>
+                    </div>
+                    <div class="flex-4 mx-xl-5 m-3 align-content-end">
+                        <p>Bank Hotel offers you a wide range of additional services and facilities. Visit our
+                            restaurant to try exclusive meals, book a conference hall to organize a business
+                            meeting, or
+                            relax in the art-bar. </p>
+                    </div>
+                    <div class="flex-3"></div>
+                </div>
+                <div class="spacing"></div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+            <div class="container-xl px-xl-5">
+                <div class="accordion accordion-flush">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-ice-restaurant" aria-expanded="true"
+                                aria-controls="collapse-ice-restaurant">
+                                <h2 class="fs-5">01 • Ice Restaurant</h2>
+                            </button>
+                        </div>
+                        <div class="d-flex hline mx-xl-5"></div>
+                        <div id="collapse-ice-restaurant" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body py-5">
+                                <div class="d-xl-flex">
+                                    <div class="flex-2"></div>
+                                    <div class="flex-2 d-flex flex-column justify-content-center">
+                                        <p>The hotel's exclusive infrastructure is complemented by the unique atmosphere
+                                            of
+                                            the Safe Restaurant. Author's menu, extensive wine card, and live music will
+                                            set
+                                            you for the correct mood.</p>
+                                    </div>
+                                    <div class="flex-3 d-flex justify-content-center">
+                                        <img id="restaurant" src="../assets/restaurant.png" alt="Ice Restaurant">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-conference-hall" aria-expanded="true"
+                                aria-controls="collapse-conference-hall">
+                                <h2 class="fs-5">02 • Conference Hall</h2>
+                            </button>
+                        </div>
+                        <div class="d-flex hline mx-xl-5"></div>
+                        <div id="collapse-conference-hall" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body py-5">
+                                <div class="d-xl-flex">
+                                    <div class="flex-3 d-flex justify-content-center">
+                                        <img class="placeholder-img" src="../assets/placeholder.svg"
+                                            alt="Conference Hall">
+                                    </div>
+                                    <div class="flex-2 d-flex flex-column justify-content-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="flex-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-wine-bar" aria-expanded="true"
+                                aria-controls="collapse-wine-bar">
+                                <h2 class="fs-5">03 • Wine Bar "Reserve"</h2>
+                            </button>
+                        </div>
+                        <div class="d-flex hline mx-xl-5"></div>
+                        <div id="collapse-wine-bar" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body py-5">
+                                <div class="d-xl-flex">
+                                    <div class="flex-2"></div>
+                                    <div class="flex-2 d-flex flex-column justify-content-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="flex-3 d-flex justify-content-center">
+                                        <img class="placeholder-img" src="../assets/placeholder.svg"
+                                            alt="Conference Hall">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacing"></div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="main-container" id="rooms">
+            <div class="container-xl d-md-flex justify-content-center">
+                <div class="d-flex image-container">
+                    <img id="best-room" src="../assets/best_room.png"
+                        srcset="../assets/best_room.png 600w, ../assets/best_room_alt.png 376w" alt="Imperial Suite">
+                    <h1 class="fs-3 p-2 overlay-text" id="best-apartments">BEST<br>APARTMENTS</h1>
+                    <p class="fs-7 p-2 overlay-text" id="best-apartments-description">All room decoration was made with
+                        ecological certified and safe materials.</p>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+            <div class="container-xl d-flex flex-column justify-content-center">
+                <div class="spacing"></div>
+                <div class="d-flex flex-2">
+                    <div class="flex-1 text-start fst-italic fw-semibold">ART & CONGRESS HALL</div>
+                    <div class="flex-4 d-flex flex-column">
+                        <div class="d-flex flex-fill justify-content-center">
+                            <img class="label" src="../assets/label.png" alt="Trademark label">
+                        </div>
+                        <div class="flex-fill text-center py-5">
+                            <h1 class="fs-2 secondary-color">OUR GALLERY</h1>
+                        </div>
+                    </div>
+                    <div class="flex-1"></div>
+                </div>
+                <div class="d-xl-flex">
+                    <div class="d-flex flex-column flex-1">
+                        <div class="d-flex flex-2 pb-5">
+                            <img id="gallery-1" src="../assets/gallery_1.png" alt="Our gallery">
+                        </div>
+                        <div class="flex-1"></div>
+                        <div class="d-flex flex-2 pt-5">
+                            <img id="gallery-2" src="../assets/gallery_2.png" alt="Our gallery">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-2 px-xl-5 py-5">
+                        <p class="flex-1 fs-8 text-center">Explore our spacious rooms with the gorgeous view to the
+                            historical
+                            part
                             of
                             the
-                            city. Stylish interior design and comfortable beds will make your stay cozy and pleasant
-                        </p>
-                        <p>
-                            <span class="fw-bold" id="room-preview-state">01</span>
-                            <span class="ps-3 pe-3">/</span>
-                            <span>04</span>
-                        </p>
-                        <div class="d-flex justify-content-between">
-                            <button class="my-5 py-2 change-room-button" type="button" id="previous-room-button">
-                                <div class="d-flex justify-content-center align-items-center px-2">
-                                    <img class="arrow-button-img" src="../assets/arrow.svg" style="rotate: 180deg;">
-                                    <div class="d-inline d-480-none">See previous room</div>
-                                </div>
-                            </button>
-                            <button class="my-5 py-2 change-room-button" type="button" id="next-room-button">
-                                <div class="d-flex justify-content-center align-items-center px-2">
-                                    <div class="d-inline d-480-none">See next room</div>
-                                    <img class="arrow-button-img" src="../assets/arrow.svg">
-                                </div>
-                            </button>
+                            city. Each room has an exclusive interior design decorated with modern art pieces that will
+                            make
+                            your stay unforgettable. </p>
+                        <div class="d-flex flex-4 justify-content-center py-5">
+                            <img class="flex-4" id="main-gallery" src="../assets/main_gallery.png" alt="Our gallery">
+                        </div>
+                        <p class="flex-1 fs-8 py-5 fst-italic">It is our pleasure to meet your most unrealistic
+                            expectations.</p>
+                    </div>
+                    <div class="d-flex flex-column flex-1">
+                        <div class="d-flex flex-2 justify-content-end pb-5">
+                            <img id="gallery-3" src="../assets/gallery_3.png" alt="Our gallery">
+                        </div>
+                        <div class="flex-1"></div>
+                        <div class="d-flex flex-2 justify-content-end pt-5">
+                            <img id="gallery-4" src="../assets/gallery_4.png" alt="Our gallery">
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center align-items-start" id="room-preview-img-2">
-                    <img class="flex-1" id="superior-twin-2" src="../assets/superior_twin_2.png" alt="Bed">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ------------------------------------------------------------------------------------------------------------- -->
-
-    <div class="secondary-container" id="our-facilities">
-        <div class="spacing"></div>
-        <div class="container-xl d-flex flex-column">
-            <div class="d-md-flex py-5">
-                <div class="flex-2 text-start">
-                    <p class="fs-7 fst-italic fw-semibold">ART & CONGRESS HALL</p>
-                </div>
-                <div class="flex-3 text-start py-4 d-flex justify-content-center">
-                    <h1 class="fs-3">OUR<br>FACILITIES</h1>
-                </div>
-                <div class="d-flex flex-1 justify-content-center">
-                    <img id="bartender" src="../assets/bartender.png" alt="Our bartender">
-                </div>
-            </div>
-            <div class="d-md-flex py-5">
-                <div class="d-flex flex-1 flex-column justify-content-center">
-                    <div class="d-flex flex-1 justify-content-center">
-                        <img id="kitchen" src="../assets/kitchen.png" alt="Inside the kitchen">
+                <div class="spacing"></div>
+                <div class="marquee-container">
+                    <div class="marquee-left">
+                        <h1 class="fs-5">Bank Hotel©</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5">Bank Hotel©</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
                     </div>
                 </div>
-                <div class="flex-4 mx-xl-5 m-3 align-content-end">
-                    <p>Bank Hotel offers you a wide range of additional services and facilities. Visit our
-                        restaurant to try exclusive meals, book a conference hall to organize a business
-                        meeting, or
-                        relax in the art-bar. </p>
+                <div class="marquee-container">
+                    <div class="marquee-right">
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5">Bank Hotel©</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5">Bank Hotel©</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                        <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
+                    </div>
                 </div>
-                <div class="flex-3"></div>
             </div>
             <div class="spacing"></div>
         </div>
 
         <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-        <div class="container-xl px-xl-5">
-            <div class="accordion accordion-flush">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse-ice-restaurant" aria-expanded="true"
-                            aria-controls="collapse-ice-restaurant">
-                            <h2 class="fs-5">01 • Ice Restaurant</h2>
-                        </button>
-                    </div>
-                    <div class="d-flex hline mx-xl-5"></div>
-                    <div id="collapse-ice-restaurant" class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body py-5">
-                            <div class="d-xl-flex">
-                                <div class="flex-2"></div>
-                                <div class="flex-2 d-flex flex-column justify-content-center">
-                                    <p>The hotel's exclusive infrastructure is complemented by the unique atmosphere
-                                        of
-                                        the Safe Restaurant. Author's menu, extensive wine card, and live music will
-                                        set
-                                        you for the correct mood.</p>
-                                </div>
-                                <div class="flex-3 d-flex justify-content-center">
-                                    <img id="restaurant" src="../assets/restaurant.png" alt="Ice Restaurant">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse-conference-hall" aria-expanded="true"
-                            aria-controls="collapse-conference-hall">
-                            <h2 class="fs-5">02 • Conference Hall</h2>
-                        </button>
-                    </div>
-                    <div class="d-flex hline mx-xl-5"></div>
-                    <div id="collapse-conference-hall" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body py-5">
-                            <div class="d-xl-flex">
-                                <div class="flex-3 d-flex justify-content-center">
-                                    <img class="placeholder-img" src="../assets/placeholder.svg" alt="Conference Hall">
-                                </div>
-                                <div class="flex-2 d-flex flex-column justify-content-center">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                        eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                                        in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div class="flex-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse-wine-bar" aria-expanded="true" aria-controls="collapse-wine-bar">
-                            <h2 class="fs-5">03 • Wine Bar "Reserve"</h2>
-                        </button>
-                    </div>
-                    <div class="d-flex hline mx-xl-5"></div>
-                    <div id="collapse-wine-bar" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body py-5">
-                            <div class="d-xl-flex">
-                                <div class="flex-2"></div>
-                                <div class="flex-2 d-flex flex-column justify-content-center">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                        eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                                        in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div class="flex-3 d-flex justify-content-center">
-                                    <img class="placeholder-img" src="../assets/placeholder.svg" alt="Conference Hall">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="spacing"></div>
-    </div>
-
-    <!-- ------------------------------------------------------------------------------------------------------------- -->
-
-    <div class="main-container" id="rooms">
-        <div class="container-xl d-md-flex justify-content-center">
-            <div class="d-flex image-container">
-                <img id="best-room" src="../assets/best_room.png"
-                    srcset="../assets/best_room.png 600w, ../assets/best_room_alt.png 376w" alt="Imperial Suite">
-                <h1 class="fs-3 p-2 overlay-text" id="best-apartments">BEST<br>APARTMENTS</h1>
-                <p class="fs-7 p-2 overlay-text" id="best-apartments-description">All room decoration was made with
-                    ecological certified and safe materials.</p>
-            </div>
-        </div>
-
-        <!-- ------------------------------------------------------------------------------------------------------------- -->
-
-        <div class="container-xl d-flex flex-column justify-content-center">
+        <div class="secondary-container" id="contacts">
             <div class="spacing"></div>
-            <div class="d-flex flex-2">
-                <div class="flex-1 text-start fst-italic fw-semibold">ART & CONGRESS HALL</div>
-                <div class="flex-4 d-flex flex-column">
-                    <div class="d-flex flex-fill justify-content-center">
-                        <img class="label" src="../assets/label.png" alt="Trademark label">
+            <div class="container-xl d-flex flex-column">
+                <h1 class="fs-5">+38 032 297 50 20</h1>
+                <div class="py-5 d-md-flex">
+                    <div class="flex-3">
+                        <div class="d-flex">
+                            <h1 class="flex-1 fs-1 text-end">GET IN</h1>
+                            <div class="flex-1"></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="flex-1"></div>
+                            <h1 class="flex-1 fs-1 secondary-color">TOUCH</h1>
+                        </div>
                     </div>
-                    <div class="flex-fill text-center py-5">
-                        <h1 class="fs-2 secondary-color">OUR GALLERY</h1>
-                    </div>
-                </div>
-                <div class="flex-1"></div>
-            </div>
-            <div class="d-xl-flex">
-                <div class="d-flex flex-column flex-1">
-                    <div class="d-flex flex-2 pb-5">
-                        <img id="gallery-1" src="../assets/gallery_1.png" alt="Our gallery">
-                    </div>
-                    <div class="flex-1"></div>
-                    <div class="d-flex flex-2 pt-5">
-                        <img id="gallery-2" src="../assets/gallery_2.png" alt="Our gallery">
-                    </div>
-                </div>
-                <div class="d-flex flex-column flex-2 px-xl-5 py-5">
-                    <p class="flex-1 fs-8 text-center">Explore our spacious rooms with the gorgeous view to the
-                        historical
-                        part
-                        of
-                        the
-                        city. Each room has an exclusive interior design decorated with modern art pieces that will
-                        make
-                        your stay unforgettable. </p>
-                    <div class="d-flex flex-4 justify-content-center py-5">
-                        <img class="flex-4" id="main-gallery" src="../assets/main_gallery.png" alt="Our gallery">
-                    </div>
-                    <p class="flex-1 fs-8 py-5 fst-italic">It is our pleasure to meet your most unrealistic
-                        expectations.</p>
-                </div>
-                <div class="d-flex flex-column flex-1">
-                    <div class="d-flex flex-2 justify-content-end pb-5">
-                        <img id="gallery-3" src="../assets/gallery_3.png" alt="Our gallery">
-                    </div>
-                    <div class="flex-1"></div>
                     <div class="d-flex flex-2 justify-content-end pt-5">
-                        <img id="gallery-4" src="../assets/gallery_4.png" alt="Our gallery">
+                        <img id="contacts-img" src="../assets/contacts_img.png" alt="">
+                    </div>
+                </div>
+                <div class="py-5">
+                    <p class="fs-7 fw-semibold">FIND A ROOM</p>
+                    <div class="multi-button" id="contacts-multi-button">
+                        <button type="button">CHECK IN</button>
+                        <button type="button">CHECK OUT</button>
+                        <button type="button">BOOK ROOM</button>
                     </div>
                 </div>
             </div>
             <div class="spacing"></div>
-            <div class="marquee-container">
-                <div class="marquee-left">
-                    <h1 class="fs-5">Bank Hotel©</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5">Bank Hotel©</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                </div>
-            </div>
-            <div class="marquee-container">
-                <div class="marquee-right">
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5">Bank Hotel©</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5">Bank Hotel©</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                    <h1 class="fs-5 white-color-opacity-40">Bank Hotel</h1>
-                </div>
-            </div>
         </div>
-        <div class="spacing"></div>
-    </div>
-
-    <!-- ------------------------------------------------------------------------------------------------------------- -->
-
-    <div class="secondary-container" id="contacts">
-        <div class="spacing"></div>
-        <div class="container-xl d-flex flex-column">
-            <h1 class="fs-5">+38 032 297 50 20</h1>
-            <div class="py-5 d-md-flex">
-                <div class="flex-3">
-                    <div class="d-flex">
-                        <h1 class="flex-1 fs-1 text-end">GET IN</h1>
-                        <div class="flex-1"></div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-1"></div>
-                        <h1 class="flex-1 fs-1 secondary-color">TOUCH</h1>
-                    </div>
-                </div>
-                <div class="d-flex flex-2 justify-content-end pt-5">
-                    <img id="contacts-img" src="../assets/contacts_img.png" alt="">
-                </div>
-            </div>
-            <div class="py-5">
-                <p class="fs-7 fw-semibold">FIND A ROOM</p>
-                <div class="multi-button" id="contacts-multi-button">
-                    <button type="button">CHECK IN</button>
-                    <button type="button">CHECK OUT</button>
-                    <button type="button">BOOK ROOM</button>
-                </div>
-            </div>
-        </div>
-        <div class="spacing"></div>
     </div>
 
     <!-- ------------------------------------------------------------------------------------------------------------- -->
@@ -491,7 +500,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="../javascript/script.js"></script>
