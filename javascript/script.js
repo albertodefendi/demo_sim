@@ -75,3 +75,22 @@ function switchHamburger() {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+
+function updateImageSrc() {
+    const imgElement = document.getElementById("best-room");
+    const width = window.innerWidth;
+
+    if (width <= 700) {
+        imgElement.src = '../assets/best_room_alt.png';
+    } else {
+        imgElement.src = '../assets/best_room.png';
+    }
+}
+
+// Chiama la funzione all'inizio per impostare l'immagine corretta
+updateImageSrc();
+
+// Event listener per aggiornare l'immagine quando la finestra viene ridimensionata
+window.addEventListener('resize', updateImageSrc);
+
+// -------------------------------------------------------------------------------------------------------------

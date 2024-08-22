@@ -12046,14 +12046,16 @@ button {
   top: 5%;
   left: 5%;
   color: #fcd043;
+  background-color: rgba(0, 0, 0, 0.466);
 }
 
 #best-apartments-description {
-  max-width: 25%;
+  max-width: 40%;
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 5%;
   color: #fcd043;
+  background-color: rgba(0, 0, 0, 0.466);
 }
 
 #logo {
@@ -12150,6 +12152,7 @@ button {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+  max-height: 100vh;
 }
 
 .label {

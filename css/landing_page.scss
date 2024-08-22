@@ -207,14 +207,16 @@ button {
     top: 5%;
     left: 5%;
     color: $secondary-color;
+    background-color: rgba(0, 0, 0, 0.466);
 }
 
 #best-apartments-description {
-    max-width: 25%;
+    max-width: 40%;
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 5%;
     color: $secondary-color;
+    background-color: rgba(0, 0, 0, 0.466);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -289,6 +291,7 @@ button {
 
 #best-room {
     @include img(100%, 100%, 100%);
+    max-height: 100vh;
 }
 
 .label {
