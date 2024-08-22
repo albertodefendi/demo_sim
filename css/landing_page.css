@@ -11924,7 +11924,7 @@ button {
 }
 
 .spacing {
-  padding: 100px 0 100px 0;
+  padding: 75px 0 75px 0;
 }
 
 .white-color {
@@ -12211,8 +12211,8 @@ button {
 .placeholder-img {
   object-fit: contain;
   width: 100%;
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 90vw;
+  min-width: 300px;
 }
 
 ::-webkit-scrollbar {
@@ -12321,6 +12321,7 @@ button {
   box-shadow: none;
 }
 #header-multi-button button {
+  width: 33%;
   color: #313f38;
   background-color: #fcd043;
   border: 1px solid #313f38;
@@ -12360,6 +12361,7 @@ button {
   box-shadow: 0px 3px 6px #9e9e9e;
 }
 #contacts-multi-button button {
+  width: 33%;
   color: #313f38;
   background-color: white;
   border: 1px solid #313f38;
