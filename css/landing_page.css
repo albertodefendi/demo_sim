@@ -12078,10 +12078,6 @@ button {
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  max-width: auto;
-  max-height: auto;
-  min-width: auto;
-  min-height: auto;
 }
 
 #icon-out {
@@ -12090,10 +12086,6 @@ button {
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  max-width: auto;
-  max-height: auto;
-  min-width: auto;
-  min-height: auto;
 }
 
 #icon-bed {
@@ -12102,10 +12094,6 @@ button {
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  max-width: auto;
-  max-height: auto;
-  min-width: auto;
-  min-height: auto;
 }
 
 #hall-img-1 {
@@ -12180,30 +12168,30 @@ button {
 
 #gallery-1 {
   object-fit: contain;
-  width: 40%;
-  max-width: 50vw;
-  min-width: 30%;
+  width: 100%;
+  max-width: 20vw;
+  min-width: 300px;
 }
 
 #gallery-2 {
   object-fit: contain;
-  width: 20%;
-  max-width: 50vw;
-  min-width: 50%;
+  width: 100%;
+  max-width: 20vw;
+  min-width: 300px;
 }
 
 #gallery-3 {
   object-fit: contain;
-  width: 16%;
-  max-width: 500px;
-  min-width: 275px;
+  width: 100%;
+  max-width: 20vw;
+  min-width: 300px;
 }
 
 #gallery-4 {
   object-fit: contain;
-  width: 16%;
-  max-width: 500px;
-  min-width: 275px;
+  width: 100%;
+  max-width: 20vw;
+  min-width: 300px;
 }
 
 #contacts-img {

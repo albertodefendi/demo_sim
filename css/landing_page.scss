@@ -219,24 +219,12 @@ button {
 
 // -------------------------------------------------------------------------------------------------------------
 
-@mixin image(
-    $image-url,
-    $width: auto,
-    $height: auto,
-    $max-width: auto,
-    $max-height: auto,
-    $min-width: auto,
-    $min-height: auto
-) {
+@mixin image($image-url, $width, $height) {
     background-image: url($image-url);
     background-size: contain;
     background-repeat: no-repeat;
     width: $width;
     height: $height;
-    max-width: $max-width;
-    max-height: $max-height;
-    min-width: $min-width;
-    min-height: $min-height;
 }
 
 @mixin img($width, $max-width, $min-width) {
@@ -311,24 +299,20 @@ button {
     @include img(30%, 100vw, 100%);
 }
 
-// #gallery-1 {
-//     @include img(16%, 350px, 180px);
-// }
-
 #gallery-1 {
-    @include img(40%, 50vw, 30%);
+    @include img(100%, 20vw, 300px);
 }
 
 #gallery-2 {
-    @include img(20%, 50vw, 50%);
+    @include img(100%, 20vw, 300px);
 }
 
 #gallery-3 {
-    @include img(16%, 500px, 275px);
+    @include img(100%, 20vw, 300px);
 }
 
 #gallery-4 {
-    @include img(16%, 500px, 275px);
+    @include img(100%, 20vw, 300px);
 }
 
 #contacts-img {
