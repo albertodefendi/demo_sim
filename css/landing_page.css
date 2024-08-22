@@ -12324,7 +12324,6 @@ button {
   box-shadow: none;
 }
 #header-multi-button button {
-  width: 33%;
   color: #313f38;
   background-color: #fcd043;
   border: 1px solid #313f38;
@@ -12335,7 +12334,7 @@ button {
   cursor: pointer;
 }
 #header-multi-button button:hover {
-  flex-grow: 2;
+  flex-grow: 2 !important;
   color: #313f38;
   background-color: #fcd043;
 }
@@ -12364,7 +12363,6 @@ button {
   box-shadow: 0px 3px 6px #9e9e9e;
 }
 #contacts-multi-button button {
-  width: 33%;
   color: #313f38;
   background-color: white;
   border: 1px solid #313f38;
@@ -12375,7 +12373,7 @@ button {
   cursor: pointer;
 }
 #contacts-multi-button button:hover {
-  flex-grow: 2;
+  flex-grow: 2 !important;
   color: #fcd043;
   background-color: #313f38;
 }

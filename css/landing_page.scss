@@ -451,7 +451,6 @@ $space: 1rem;
     box-shadow: 0px 3px 6px #9e9e9e;
 
     button {
-        width: 33%;
         color: $color;
         background-color: $background-color;
         border: 1px solid $color;
@@ -462,7 +461,7 @@ $space: 1rem;
         cursor: pointer;
 
         &:hover {
-            flex-grow: 2;
+            flex-grow: 2 !important;
             color: $hover-color;
             background-color: $hover-background-color;
         }
