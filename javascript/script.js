@@ -21,31 +21,31 @@ class roomPreview {
     }
 }
 
-let superiorTwin = new roomPreview("../assets/superior_twin_1.png", "../assets/superior_twin_2.png", "Superior Twin", "The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city.Stylish interior design and comfortable beds will make your stay cozy and pleasant")
-let suite2 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-let suite3 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-let suite4 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+let superiorTwinDescription = "The Superior twin is perfect for those who plan to stay long. The spacious and bright room is equipped with deluxe Italian furniture and has a beautiful view to the historical part of the city.Stylish interior design and comfortable beds will make your stay cozy and pleasant";
+let loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+let superiorTwin = new roomPreview("../assets/superior_twin_1.png", "../assets/superior_twin_2.png", "Superior Twin", superiorTwinDescription)
+let suite2 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 2", loremIpsum)
+let suite3 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 3", loremIpsum)
+let suite4 = new roomPreview("../assets/placeholder.svg", "../assets/placeholder.svg", "Lorem Ipsum 4", loremIpsum)
 
 let roomsArray = [superiorTwin, suite2, suite3, suite4];
 
-function changeRoom(direction) 
-{   
+function changeRoom(direction) {
     let newRoom;
     let roomNumber = Number(document.getElementById("room-preview-state").textContent) - 1;
 
-    if (direction == "previous")
-    {
+    if (direction == "previous") {
         if (roomNumber == 0)
             roomNumber = roomsArray.length;
-        
+
         roomNumber--;
         newRoom = roomsArray[roomNumber];
     }
-    else if (direction == "next")
-    {
+    else if (direction == "next") {
         if (roomNumber == roomsArray.length - 1)
             roomNumber = -1;
-        
+
         roomNumber++;
         newRoom = roomsArray[roomNumber];
     }
@@ -92,5 +92,19 @@ updateImageSrc();
 
 // Event listener per aggiornare l'immagine quando la finestra viene ridimensionata
 window.addEventListener('resize', updateImageSrc);
+
+// -------------------------------------------------------------------------------------------------------------
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from("#navbar", { y: "-90%", duration: 1.3, ease: "bounce" });
+gsap.from(".nav-item ", { y: "-70%", duration: 1.3, ease: "elastic", stagger: 0.1 });
+
+gsap.fromTo("#header", { opacity: "10%" }, { duration: 2, ease: "power2.out", opacity: "100%" });
+
+// gsap.fromTo("#header", { x: "30%" }, { x: "0%", duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#header", toggleActions: "play none restart none" } });
+// gsap.fromTo("#intro", { x: "-30%" }, { x: "0%", duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#intro", toggleActions: "play none restart none" } });
+// gsap.fromTo("#tooms-image", { x: "30%" }, { x: "0%", duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#header", toggleActions: "play none restart none" } });
+// gsap.fromTo("#header-description", { x: "-30%" }, { x: "0%", duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#header-description", toggleActions: "play none restart none" } });
 
 // -------------------------------------------------------------------------------------------------------------

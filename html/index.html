@@ -11,6 +11,9 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <link rel="stylesheet" href="../css/landing_page.css" />
     <title>SIM Demo</title>
 </head>
@@ -56,7 +59,7 @@
     <div>
         <div class="main-container" id="header">
             <div class="container-xl d-xl-flex flex-column">
-                <div class="d-xl-flex align-items-center pt-5 pb-5">
+                <div class="d-xl-flex align-items-center pt-5 pb-5" id="intro">
                     <div class="flex-2">
                         <h1 class="fs-1"><span class="d-inline-block white-color">BANK</span><span
                                 class="d-inline-block secondary-color">HOTEL</span>
@@ -90,33 +93,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex">
-                    <div class="d-flex flex-column flex-fill">
-                        <div class="text-start">Tel: +38 032 297 50 20</div>
-                        <div class="text-start">Address: 8 Lystopadovoho Chynu, Lviv</div>
-                    </div>
-                    <div class="flex-fill text-end fst-italic fw-semibold">ART & CONGRESS HALL</div>
-                </div>
-                <div class="spacing"></div>
-                <div class="d-md-flex pt-5 pb-5">
-                    <div class="d-flex justify-content-center">
-                        <img class="flex-1" id="hall-img-1" src="../assets/hall_img_1.png" alt="Hall">
-                    </div>
-                    <div class="flex-fill d-flex justify-content-center flex-column p-5">
-                        <h1 class="fs-2 text-end mb-4"><span class="secondary-color d-block">ABOUT </span><span
-                                class="d-block">US</span>
-                        </h1>
-                        <div class="mt-4">
-                            <h2 class="fs-4 mb-5">High Quality</h1>
-                                <p>The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated
-                                    and
-                                    modernized to meet the expectations of the most demanding guests. We offer luxurious
-                                    rooms,
-                                    numerous facilities, and exceptional service</p>
+                <div id="header-description">
+                    <div class="d-flex">
+                        <div class="d-flex flex-column flex-fill">
+                            <div class="text-start">Tel: +38 032 297 50 20</div>
+                            <div class="text-start">Address: 8 Lystopadovoho Chynu, Lviv</div>
                         </div>
+                        <div class="flex-fill text-end fst-italic fw-semibold">ART & CONGRESS HALL</div>
                     </div>
-                    <div class="d-flex justify-content-center d-480-none">
-                        <img class="flex-1" id="hall-img-2" src="../assets/hall_img_2.png" alt="Hall">
+                    <div class="spacing"></div>
+                    <div class="d-md-flex pt-5 pb-5">
+                        <div class="d-flex justify-content-center">
+                            <img class="flex-1" id="hall-img-1" src="../assets/hall_img_1.png" alt="Hall">
+                        </div>
+                        <div class="flex-fill d-flex justify-content-center flex-column p-5">
+                            <h1 class="fs-2 text-end mb-4"><span class="secondary-color d-block">ABOUT </span><span
+                                    class="d-block">US</span>
+                            </h1>
+                            <div class="mt-4">
+                                <h2 class="fs-4 mb-5">High Quality</h1>
+                                    <p>The five-star Bank Hotel was reopened to visitors in 2016. The building was
+                                        renovated
+                                        and
+                                        modernized to meet the expectations of the most demanding guests. We offer
+                                        luxurious
+                                        rooms,
+                                        numerous facilities, and exceptional service</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center d-480-none">
+                            <img class="flex-1" id="hall-img-2" src="../assets/hall_img_2.png" alt="Hall">
+                        </div>
                     </div>
                 </div>
             </div>
