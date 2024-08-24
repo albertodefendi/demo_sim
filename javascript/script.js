@@ -100,90 +100,27 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from("#navbar", { y: "-90%", duration: 1.3, ease: "bounce" });
 gsap.from(".nav-item ", { y: "-70%", duration: 1.3, ease: "elastic", stagger: 0.1 });
 
-gsap.fromTo("#header", 
-    {
-        opacity: "0%",
-        y: "20%",
-    },
-    {
-        duration: 1,
-        ease: "power1",
-        y: "0%",
-        opacity: "100%",
+function createScrollAnimation(triggerElement, fromProps, toProps) {
+    gsap.fromTo(triggerElement, fromProps, {
+        ...toProps,
         scrollTrigger: {
-            trigger: "#header",
-            toggleActions: "play reverse play reset",
-            end: "bottom 40%",
-    }
-});
+            trigger: triggerElement,
+            toggleActions: "play reverse play reverse",
+            end: "bottom 60%",
+        }
+    });
+}
 
-gsap.fromTo("#rooms-and-apartments", 
-    {
-        opacity: "0%",
-        x: "20%",
-    },
-    {
-        duration: 1,
-        ease: "power1",
-        x: "0%",
-        opacity: "100%",
-        scrollTrigger: {
-            trigger: "#rooms-and-apartments",
-            toggleActions: "play reverse play reset",
-            end: "bottom 40%",
-    }
-});
+const toAnimationProps = {
+    opacity: "100%",
+    duration: 1,
+    ease: "power1"
+};
 
-gsap.fromTo("#our-facilities", 
-    {
-        opacity: "0%",
-        x: "-20%",
-    },
-    {
-        duration: 1,
-        ease: "power1",
-        x: "0%",
-        opacity: "100%",
-        scrollTrigger: {
-            trigger: "#our-facilities",
-            toggleActions: "play reverse play reset",
-            end: "bottom 40%",
-    }
-});
-
-gsap.fromTo("#rooms", 
-    {
-        opacity: "0%",
-        x: "20%",
-    },
-    {
-        duration: 1,
-        ease: "power1",
-        x: "0%",
-        opacity: "100%",
-        scrollTrigger: {
-            trigger: "#rooms",
-            toggleActions: "play reverse play reset",
-            end: "bottom 40%",
-    }
-});
-
-gsap.fromTo("#contacts", 
-    {
-        opacity: "0%",
-        y: "20%",
-    },
-    {
-        duration: 1,
-        ease: "power1",
-        y: "0%",
-        opacity: "100%",
-        scrollTrigger: {
-            trigger: "#contacts",
-            toggleActions: "play reverse play reset",
-            end: "bottom 40%",
-    }
-});
-
+createScrollAnimation("#header", { opacity: "0%", y: "-20%" }, { ...toAnimationProps, y: "0%" });
+createScrollAnimation("#rooms-and-apartments", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
+createScrollAnimation("#our-facilities", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
+createScrollAnimation("#rooms", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
+createScrollAnimation("#contacts", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%", pin: true });
 
 // -------------------------------------------------------------------------------------------------------------
