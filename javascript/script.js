@@ -1,4 +1,6 @@
+// -------------------------------------------------------------------------------------------------------------
 //Gestione dell'icona di conferma sottoscrizione alla newsletter
+
 let newsletterButton = document.getElementById("newsletter-subscribe");
 newsletterButton.addEventListener("click", () => {
     document.getElementById("email").value = "";
@@ -10,8 +12,8 @@ newsletterButton.addEventListener("click", () => {
 })
 
 // -------------------------------------------------------------------------------------------------------------
-
 //Carosello stanze
+
 class roomPreview {
     constructor(firstImgSrc, secondImgSrc, title, description) {
         this.firstImgSrc = firstImgSrc;
@@ -67,14 +69,15 @@ nextRoomButton.addEventListener("click", () => {
 });
 
 // -------------------------------------------------------------------------------------------------------------
-
 // Hamburger menu switch
+
 function switchHamburger() {
     document.getElementById("hamburger").classList.toggle("change");
     document.getElementById("nav-main-link").classList.toggle("hidden");
 }
 
 // -------------------------------------------------------------------------------------------------------------
+// Gestione src immagini in funzione del viewport
 
 function updateImageSrc() {
     const imgElement = document.getElementById("best-room");
@@ -87,13 +90,13 @@ function updateImageSrc() {
     }
 }
 
-// Chiama la funzione all'inizio per impostare l'immagine corretta
 updateImageSrc();
 
 // Event listener per aggiornare l'immagine quando la finestra viene ridimensionata
 window.addEventListener('resize', updateImageSrc);
 
 // -------------------------------------------------------------------------------------------------------------
+// Animazioni gsap
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,21 +109,26 @@ function createScrollAnimation(triggerElement, fromProps, toProps) {
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "play reverse play reverse",
-            end: "bottom 60%",
+            // end: "bottom 60%",
         }
     });
+}
+
+const fromAnimationProps = {
+    opacity: "0%"
 }
 
 const toAnimationProps = {
     opacity: "100%",
     duration: 1,
-    ease: "power1"
+    ease: "power1",
+    y: "0%"
 };
 
-createScrollAnimation("#header", { opacity: "0%", y: "-20%" }, { ...toAnimationProps, y: "0%" });
-createScrollAnimation("#rooms-and-apartments", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
-createScrollAnimation("#our-facilities", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
-createScrollAnimation("#rooms", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%" });
-createScrollAnimation("#contacts", { opacity: "0%", y: "20%" }, { ...toAnimationProps, y: "0%", pin: true });
+createScrollAnimation("#header", { ...fromAnimationProps, y: "-20%" }, { ...toAnimationProps });
+createScrollAnimation("#rooms-and-apartments", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
+createScrollAnimation("#our-facilities", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
+createScrollAnimation("#rooms", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
+createScrollAnimation("#contacts", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps, pin: true });
 
 // -------------------------------------------------------------------------------------------------------------
