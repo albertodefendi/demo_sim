@@ -1,0 +1,147 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// -------------------------------------------------------------------------------------------------------------
+
+$primary-color: #ebd96b;
+$secondary-color: #c2c8da;
+$font: "Poppins", sans-serif;
+
+// -------------------------------------------------------------------------------------------------------------
+
+$h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 6;
+$h3-font-size: $font-size-base * 5;
+$h4-font-size: $font-size-base * 4.5;
+$h5-font-size: $font-size-base * 3.5;
+$h6-font-size: $font-size-base * 2.2;
+$h7-font-size: $font-size-base * 1.5;
+$h8-font-size: $font-size-base;
+
+$new-font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $h7-font-size,
+    8: $h8-font-size
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+
+$new-container-max-widths: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1440px,
+    xxl: 1720px
+);
+$container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
+
+// $accordion-bg: transparent;
+// $accordion-border-color: transparent;
+// $accordion-button-active-bg: transparent;
+// $accordion-button-active-color: $primary-color;
+// -------------------------------------------------------------------------------------------------------------
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// -------------------------------------------------------------------------------------------------------------
+
+body {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+.primary-color-bg {
+    background-color: $primary-color;
+}
+
+.poppins-black {
+    font-weight: 900 !important;
+}
+
+.poppins-medium {
+    font-weight: 500 !important;
+}
+
+.black-button {
+    background-color: black;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: none;
+}
+
+.tilted-bg {
+    transform: rotate(-2deg);
+}
+
+.tilted-bg-text {
+    transform: rotate(2deg);
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.yellow-bg {
+    background-color: $primary-color;
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+#main-block {
+    background-color: #f4f6f5;
+    border-radius: 59px;
+}
+
+#brands-section {
+    > img {
+        max-height: 50px;
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+//DA CAMBIARE PERCHÉ NON MI PIACE
+
+// .hamburger {
+//     display: inline-block;
+//     cursor: pointer;
+//     border: black 1px solid;
+// }
+
+// .bar1,
+// .bar2,
+// .bar3 {
+//     width: 35px;
+//     height: 3px;
+//     background-color: black;
+//     margin: 6px 0;
+//     transition: 0.4s;
+//     border-radius: 20px;
+// }
+
+// .change .bar1 {
+//     transform: translate(0, 9px) rotate(-45deg);
+// }
+
+// .change .bar2 {
+//     opacity: 0;
+// }
+
+// .change .bar3 {
+//     transform: translate(0, -9px) rotate(45deg);
+// }
+
+// .hidden {
+//     display: none;
+//     transition: display 1s;
+// }
+
+// -------------------------------------------------------------------------------------------------------------
