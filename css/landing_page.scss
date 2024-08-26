@@ -285,11 +285,11 @@ button {
 }
 
 #kitchen {
-    @include img(50vw, 500px, 275px);
+    @include img(36vw, 443px, 300px, 286px, 193px);
 }
 
 #restaurant {
-    @include img(30vw, 500px, 275px);
+    @include img(30vw, 600px, 300px, 849px, 424px);
 }
 
 #best-room {
@@ -302,7 +302,7 @@ button {
 }
 
 #main-gallery {
-    @include img(30%, 100vw, 100%);
+    @include img(40%, 100vw, 100%);
 }
 
 #gallery-1 {
