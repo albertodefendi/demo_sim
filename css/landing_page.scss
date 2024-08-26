@@ -269,19 +269,19 @@ button {
 }
 
 #hall-img-2 {
-    @include img(60vw, 100%, 120px);
+    @include img(60vw, 314px, 200px, 414px, 263px);
 }
 
 #superior-twin-1 {
-    @include img(36vw, 350px, 180px);
+    @include img(30vw, 285px, 180px, 339px, 214px);
 }
 
 #superior-twin-2 {
-    @include img(36vw, 550px, 300px);
+    @include img(34vw, 550px, 300px, 726px, 396px);
 }
 
 #bartender {
-    @include img(36vw, 550px, 250px);
+    @include img(36vw, 443px, 300px, 286px, 193px);
 }
 
 #kitchen {

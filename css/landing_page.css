@@ -12113,37 +12113,37 @@ button {
 #hall-img-2 {
   object-fit: contain;
   width: 60vw;
-  max-width: 100%;
-  min-width: 120px;
-  max-height: auto;
-  min-height: auto;
+  max-width: 314px;
+  min-width: 200px;
+  max-height: 414px;
+  min-height: 263px;
 }
 
 #superior-twin-1 {
   object-fit: contain;
-  width: 36vw;
-  max-width: 350px;
+  width: 30vw;
+  max-width: 285px;
   min-width: 180px;
-  max-height: auto;
-  min-height: auto;
+  max-height: 339px;
+  min-height: 214px;
 }
 
 #superior-twin-2 {
   object-fit: contain;
-  width: 36vw;
+  width: 34vw;
   max-width: 550px;
   min-width: 300px;
-  max-height: auto;
-  min-height: auto;
+  max-height: 726px;
+  min-height: 396px;
 }
 
 #bartender {
   object-fit: contain;
   width: 36vw;
-  max-width: 550px;
-  min-width: 250px;
-  max-height: auto;
-  min-height: auto;
+  max-width: 443px;
+  min-width: 300px;
+  max-height: 286px;
+  min-height: 193px;
 }
 
 #kitchen {
