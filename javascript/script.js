@@ -110,7 +110,7 @@ function createScrollAnimation(triggerElement, fromProps, toProps) {
             trigger: triggerElement,
             toggleActions: "play reverse play reverse",
             start: "top 30%",
-            end: "bottom 40%",
+            end: "bottom 40%"
         }
     });
 }
