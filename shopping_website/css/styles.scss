@@ -11,11 +11,11 @@ $font: "Poppins", sans-serif;
 
 $h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 6;
-$h3-font-size: $font-size-base * 5;
-$h4-font-size: $font-size-base * 4.5;
-$h5-font-size: $font-size-base * 3.5;
-$h6-font-size: $font-size-base * 2.2;
-$h7-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 2.8;
+$h4-font-size: $font-size-base * 2.3;
+$h5-font-size: $font-size-base * 1.8;
+$h6-font-size: $font-size-base * 1.5;
+$h7-font-size: $font-size-base * 1.2;
 $h8-font-size: $font-size-base;
 
 $new-font-sizes: (
@@ -40,9 +40,8 @@ $new-container-max-widths: (
 $container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
 
 // $accordion-bg: transparent;
-// $accordion-border-color: transparent;
-// $accordion-button-active-bg: transparent;
-// $accordion-button-active-color: $primary-color;
+$card-border-width: 0;
+
 // -------------------------------------------------------------------------------------------------------------
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

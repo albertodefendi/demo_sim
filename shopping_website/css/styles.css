@@ -241,38 +241,38 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: calc(1.405rem + 1.86vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 5rem;
+    font-size: 2.8rem;
   }
 }
 
 h4, .h4 {
-  font-size: calc(1.575rem + 3.9vw);
+  font-size: calc(1.355rem + 1.26vw);
 }
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 4.5rem;
+    font-size: 2.3rem;
   }
 }
 
 h5, .h5 {
-  font-size: calc(1.475rem + 2.7vw);
+  font-size: calc(1.305rem + 0.66vw);
 }
 @media (min-width: 1200px) {
   h5, .h5 {
-    font-size: 3.5rem;
+    font-size: 1.8rem;
   }
 }
 
 h6, .h6 {
-  font-size: calc(1.345rem + 1.14vw);
+  font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   h6, .h6 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -4306,7 +4306,7 @@ textarea.form-control-lg {
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
-  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-width: 0;
   --bs-card-border-color: var(--bs-border-color-translucent);
   --bs-card-border-radius: var(--bs-border-radius);
   --bs-card-box-shadow: ;
@@ -8252,23 +8252,23 @@ textarea.form-control-lg {
 }
 
 .fs-3 {
-  font-size: calc(1.625rem + 4.5vw) !important;
+  font-size: calc(1.405rem + 1.86vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.575rem + 3.9vw) !important;
+  font-size: calc(1.355rem + 1.26vw) !important;
 }
 
 .fs-5 {
-  font-size: calc(1.475rem + 2.7vw) !important;
+  font-size: calc(1.305rem + 0.66vw) !important;
 }
 
 .fs-6 {
-  font-size: calc(1.345rem + 1.14vw) !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
 
 .fs-7 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: 1.2rem !important;
 }
 
 .fs-8 {
@@ -11821,18 +11821,15 @@ textarea.form-control-lg {
     font-size: 6rem !important;
   }
   .fs-3 {
-    font-size: 5rem !important;
+    font-size: 2.8rem !important;
   }
   .fs-4 {
-    font-size: 4.5rem !important;
+    font-size: 2.3rem !important;
   }
   .fs-5 {
-    font-size: 3.5rem !important;
+    font-size: 1.8rem !important;
   }
   .fs-6 {
-    font-size: 2.2rem !important;
-  }
-  .fs-7 {
     font-size: 1.5rem !important;
   }
 }
