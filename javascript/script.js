@@ -109,7 +109,8 @@ function createScrollAnimation(triggerElement, fromProps, toProps) {
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "play reverse play reverse",
-            // end: "bottom 60%",
+            start: "top 30%",
+            end: "bottom 40%",
         }
     });
 }
@@ -122,13 +123,12 @@ const toAnimationProps = {
     opacity: "100%",
     duration: 1,
     ease: "power1",
-    y: "0%"
 };
 
-createScrollAnimation("#header", { ...fromAnimationProps, y: "-20%" }, { ...toAnimationProps });
-createScrollAnimation("#rooms-and-apartments", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
-createScrollAnimation("#our-facilities", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
-createScrollAnimation("#rooms", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps });
-createScrollAnimation("#contacts", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps, pin: true });
+createScrollAnimation("#header", { ...fromAnimationProps, y: "-20%" }, { ...toAnimationProps, y: "0%" });
+createScrollAnimation("#rooms-and-apartments", { ...fromAnimationProps, x: "-20%" }, { ...toAnimationProps, x: "0%" });
+createScrollAnimation("#our-facilities", { ...fromAnimationProps, x: "-20%" }, { ...toAnimationProps, x: "0%" });
+createScrollAnimation("#rooms", { ...fromAnimationProps, x: "-20%" }, { ...toAnimationProps, x: "0%" });
+createScrollAnimation("#contacts", { ...fromAnimationProps, y: "20%" }, { ...toAnimationProps, y: "0%", pin: true });
 
 // -------------------------------------------------------------------------------------------------------------

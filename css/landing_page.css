@@ -12158,9 +12158,9 @@ button {
 #restaurant {
   object-fit: contain;
   width: 30vw;
-  max-width: 600px;
+  max-width: 500px;
   min-width: 300px;
-  max-height: 849px;
+  max-height: 707px;
   min-height: 424px;
 }
 
