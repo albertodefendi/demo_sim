@@ -39,8 +39,22 @@ $new-container-max-widths: (
 );
 $container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
 
-// $accordion-bg: transparent;
+$gutters: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 5,
+    7: $spacer * 7,
+    8: $spacer * 10,
+    9: $spacer * 12.5,
+    10: $spacer * 15
+);
+
 $card-border-width: 0;
+$card-height: 100%;
 
 // -------------------------------------------------------------------------------------------------------------
 
@@ -61,6 +75,10 @@ body {
     background-color: $primary-color;
 }
 
+.white-bg {
+    background-color: white;
+}
+
 .poppins-black {
     font-weight: 900 !important;
 }
@@ -79,18 +97,46 @@ body {
 
 .tilted-bg {
     transform: rotate(-2deg);
+    width: fit-content;
 }
 
 .tilted-bg-text {
     transform: rotate(2deg);
 }
 
-.white-bg {
-    background-color: white;
-}
-
 .yellow-bg {
     background-color: $primary-color;
+}
+
+.card {
+    max-width: 320px;
+    min-width: 200px;
+}
+
+.card-body {
+    padding: 0;
+    margin: 15px 0;
+}
+
+.card {
+    &-title,
+    &-description {
+        letter-spacing: -1px;
+        font-weight: 500;
+    }
+
+    &-title {
+        color: #191919;
+    }
+
+    &-description {
+        color: #7f7f7f;
+    }
+}
+
+.sales-banner {
+    background: rgb(224, 195, 64);
+    background: linear-gradient(315deg, rgba(224, 195, 64, 1) 0%, rgba(249, 223, 86, 1) 100%);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -104,6 +150,12 @@ body {
     > img {
         max-height: 50px;
     }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+#main-girl-img {
+    max-height: 50%;
 }
 
 // -------------------------------------------------------------------------------------------------------------
