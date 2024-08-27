@@ -12140,6 +12140,7 @@ nav * {
 
 .poppins-black {
   font-weight: 900 !important;
+  letter-spacing: 0;
 }
 
 .poppins-medium {
@@ -12233,6 +12234,44 @@ nav * {
   flex: 8;
 }
 
+.grey-text {
+  color: #7c7c7c;
+}
+
+.max-width-0 {
+  max-width: 0%; /* Imposta l'unità di misura a % */
+}
+.max-width-10 {
+  max-width: 10%; /* Imposta l'unità di misura a % */
+}
+.max-width-20 {
+  max-width: 20%; /* Imposta l'unità di misura a % */
+}
+.max-width-30 {
+  max-width: 30%; /* Imposta l'unità di misura a % */
+}
+.max-width-40 {
+  max-width: 40%; /* Imposta l'unità di misura a % */
+}
+.max-width-50 {
+  max-width: 50%; /* Imposta l'unità di misura a % */
+}
+.max-width-60 {
+  max-width: 60%; /* Imposta l'unità di misura a % */
+}
+.max-width-70 {
+  max-width: 70%; /* Imposta l'unità di misura a % */
+}
+.max-width-80 {
+  max-width: 80%; /* Imposta l'unità di misura a % */
+}
+.max-width-90 {
+  max-width: 90%; /* Imposta l'unità di misura a % */
+}
+.max-width-100 {
+  max-width: 100%; /* Imposta l'unità di misura a % */
+}
+
 #main-block {
   background-color: #f4f6f5;
   border-radius: 59px;
@@ -12240,6 +12279,13 @@ nav * {
 
 #brands-section > img {
   max-height: 50px;
+}
+
+#download-section a > img {
+  max-height: 40px;
+}
+#download-section a > img:hover {
+  cursor: pointer;
 }
 
 #main-girl-img {

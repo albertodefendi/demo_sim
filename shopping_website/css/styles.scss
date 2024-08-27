@@ -88,6 +88,7 @@ nav {
 
 .poppins-black {
     font-weight: 900 !important;
+    letter-spacing: 0;
 }
 
 .poppins-medium {
@@ -161,6 +162,20 @@ nav {
     }
 }
 
+.grey-text {
+    color: #7c7c7c;
+}
+
+.max-width {
+    @for $i from 0 through 100 {
+        @if $i % 10 == 0 {
+            &-#{$i} {
+                max-width: #{$i + "%"}; /* Imposta l'unità di misura a % */
+            }
+        }
+    }
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 #main-block {
@@ -171,6 +186,17 @@ nav {
 #brands-section {
     > img {
         max-height: 50px;
+    }
+}
+
+#download-section {
+    a {
+        > img {
+            max-height: 40px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 
