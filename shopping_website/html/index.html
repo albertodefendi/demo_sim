@@ -30,7 +30,7 @@
                         <div class="d-inline">FASHION</div>
                     </a>
                 </div>
-                <div class="collapse navbar-collapse justify-content-end flex-8" id="navbar-links-container">
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links-container">
                     <ul class="navbar-nav poppins-medium" id="navbar-links">
                         <li class="nav-item px-3 align-self-center">
                             <a class="nav-link" href="#">CATALOGUE</a>
@@ -51,7 +51,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="flex-1 text-end">
+                <div class="text-end">
                     <div class="hamburger p-2 navbar-toggler collapsed" data-bs-toggle="collapse"
                         data-bs-target="#navbar-links-container" aria-controls="navbar-links-container"
                         aria-expanded="false" aria-label="Toggle navigation" onclick="switchHamburger()" id="hamburger">
@@ -67,7 +67,7 @@
     <!--  ------------------------------------------------------------------------------------------------------------- -->
 
     <div class="container-md">
-        <div class="d-flex my-5" id="main-block">
+        <div class="d-flex justify-content-between my-5" id="main-block">
             <div class="align-self-center m-5">
                 <div class="poppins-black fs-3">
                     <div class="tilted-bg white-bg">
@@ -86,8 +86,8 @@
                     <div>SHOP NOW</div>
                 </button>
             </div>
-            <div>
-                <img src="../assets/main_girl.png" id="main-girl-img">
+            <div class="d-flex" id="main-girl">
+                <img class="align-self-end" src="../assets/main_girl.png" id="main-girl-img">
             </div>
         </div>
     </div>
@@ -150,13 +150,13 @@
 
     <!--  ------------------------------------------------------------------------------------------------------------- -->
 
-    <div class="sales-banner">
+    <div class="sales-banner y-5">
         <div class="container-md">
-            <div class="d-flex justify-content-evenly my-5" id="sales-block">
+            <div class="d-flex justify-content-between my-5" id="sales-block">
                 <div>
                     <img src="../assets/sales_girl.png" id="sales-girl-img">
                 </div>
-                <div class="align-self-center m-5">
+                <div class="align-self-center my-5">
                     <div class="poppins-black fs-3">
                         <div class="tilted-bg white-bg">
                             <div class="tilted-bg-text px-4">PAYDAY</div>
@@ -177,6 +177,38 @@
                     <button class="black-button mx-4" type="button">
                         <div>SHOP NOW</div>
                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--  ------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="container-md my-5">
+        <div class="fs-5 poppins-black">
+            Young's Favourite
+        </div>
+        <div class="my-5 d-flex justify-content-between">
+            <div class="card">
+                <img src="../assets/trending.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="card-title fs-6">
+                        Trending on Instagram
+                    </div>
+                    <div class="card-description fs-7">
+                        Explore Now!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/offers.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="card-title fs-6">
+                        All Under $40
+                    </div>
+                    <div class="card-description fs-7">
+                        Explore Now!
+                    </div>
                 </div>
             </div>
         </div>

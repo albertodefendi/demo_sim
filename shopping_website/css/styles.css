@@ -12173,7 +12173,6 @@ body {
 }
 
 .card-title, .card-description {
-  letter-spacing: -1px;
   font-weight: 500;
 }
 .card-title {
@@ -12188,6 +12187,38 @@ body {
   background: linear-gradient(315deg, rgb(224, 195, 64) 0%, rgb(249, 223, 86) 100%);
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
+}
+
+.flex-7 {
+  flex: 7;
+}
+
+.flex-8 {
+  flex: 8;
+}
+
 #main-block {
   background-color: #f4f6f5;
   border-radius: 59px;
@@ -12198,7 +12229,7 @@ body {
 }
 
 #main-girl-img {
-  max-height: 50%;
+  max-height: 500px;
 }
 
 /*# sourceMappingURL=styles.css.map */
