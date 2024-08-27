@@ -12193,9 +12193,7 @@ nav * {
 .arrow-button {
   background-color: transparent;
   border: none;
-}
-.arrow-button img {
-  width: 30px;
+  width: 40px;
 }
 
 .sales-banner {

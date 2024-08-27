@@ -7,6 +7,7 @@ $primary-color: #ebd96b;
 $secondary-color: #c2c8da;
 $font: "Poppins", sans-serif;
 $border-radius-buttons: 8px;
+$tilted-degrees: 2deg;
 
 // -------------------------------------------------------------------------------------------------------------
 
@@ -110,12 +111,12 @@ nav {
 }
 
 .tilted-bg {
-    transform: rotate(-2deg);
+    transform: rotate(-$tilted-degrees);
     width: fit-content;
 }
 
 .tilted-bg-text {
-    transform: rotate(2deg);
+    transform: rotate($tilted-degrees);
 }
 
 .card {
@@ -147,10 +148,7 @@ nav {
 .arrow-button {
     background-color: transparent;
     border: none;
-
-    img {
-        width: 30px;
-    }
+    width: 40px;
 }
 
 .sales-banner {
