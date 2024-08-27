@@ -12130,6 +12130,11 @@ nav * {
   letter-spacing: 1px;
 }
 
+a:hover {
+  cursor: pointer;
+  color: #ebd96b !important;
+}
+
 .primary-color-bg {
   background-color: #ebd96b;
 }
@@ -12306,6 +12311,11 @@ nav * {
 }
 #download-section a > img:hover {
   cursor: pointer;
+}
+
+#navbar-logo {
+  max-width: 32px;
+  max-height: 30px;
 }
 
 #main-girl-img {

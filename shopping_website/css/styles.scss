@@ -63,6 +63,7 @@ $card-height: 100%;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // -------------------------------------------------------------------------------------------------------------
+// Elementi default
 
 body {
     font-family: $font;
@@ -78,7 +79,13 @@ nav {
     }
 }
 
+a:hover {
+    cursor: pointer;
+    color: $primary-color !important;
+}
+
 // -------------------------------------------------------------------------------------------------------------
+// Classi
 
 .primary-color-bg {
     background-color: $primary-color;
@@ -201,6 +208,7 @@ nav {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+// ID
 
 #main-block {
     background-color: #f4f6f5;
@@ -225,6 +233,12 @@ nav {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+// Immagini
+
+#navbar-logo {
+    max-width: 32px;
+    max-height: 30px;
+}
 
 #main-girl-img {
     max-height: 500px;
