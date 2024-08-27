@@ -67,7 +67,15 @@ body {
     font-style: normal;
     font-weight: 400;
     color: black;
+    letter-spacing: -1px;
 }
+
+nav {
+    * {
+        letter-spacing: 1px;
+    }
+}
+
 // -------------------------------------------------------------------------------------------------------------
 
 .primary-color-bg {
@@ -108,13 +116,14 @@ body {
 }
 
 .card {
-    max-width: 320px;
-    min-width: 200px;
+    min-width: 320px;
 }
 
 .card-body {
     padding: 0;
     margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
@@ -129,6 +138,15 @@ body {
 
     &-description {
         color: #7f7f7f;
+    }
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+
+    img {
+        width: 30px;
     }
 }
 
