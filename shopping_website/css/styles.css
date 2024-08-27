@@ -12138,6 +12138,11 @@ nav * {
   background-color: white;
 }
 
+.black-bg {
+  background-color: black;
+  color: white;
+}
+
 .poppins-black {
   font-weight: 900 !important;
   letter-spacing: 0;
@@ -12151,7 +12156,7 @@ nav * {
   background-color: black;
   color: white;
   padding: 16px 24px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
 }
 
@@ -12162,10 +12167,6 @@ nav * {
 
 .tilted-bg-text {
   transform: rotate(2deg);
-}
-
-.yellow-bg {
-  background-color: #ebd96b;
 }
 
 .card {
@@ -12239,42 +12240,63 @@ nav * {
 }
 
 .max-width-0 {
-  max-width: 0%; /* Imposta l'unità di misura a % */
+  max-width: 0%;
 }
 .max-width-10 {
-  max-width: 10%; /* Imposta l'unità di misura a % */
+  max-width: 10%;
 }
 .max-width-20 {
-  max-width: 20%; /* Imposta l'unità di misura a % */
+  max-width: 20%;
 }
 .max-width-30 {
-  max-width: 30%; /* Imposta l'unità di misura a % */
+  max-width: 30%;
 }
 .max-width-40 {
-  max-width: 40%; /* Imposta l'unità di misura a % */
+  max-width: 40%;
 }
 .max-width-50 {
-  max-width: 50%; /* Imposta l'unità di misura a % */
+  max-width: 50%;
 }
 .max-width-60 {
-  max-width: 60%; /* Imposta l'unità di misura a % */
+  max-width: 60%;
 }
 .max-width-70 {
-  max-width: 70%; /* Imposta l'unità di misura a % */
+  max-width: 70%;
 }
 .max-width-80 {
-  max-width: 80%; /* Imposta l'unità di misura a % */
+  max-width: 80%;
 }
 .max-width-90 {
-  max-width: 90%; /* Imposta l'unità di misura a % */
+  max-width: 90%;
 }
 .max-width-100 {
-  max-width: 100%; /* Imposta l'unità di misura a % */
+  max-width: 100%;
+}
+
+.input-box {
+  width: 40%;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: calc(0.5rem + 8px);
+}
+
+.form-input {
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+.form-input:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.footer-links > * {
+  margin: 1rem;
 }
 
 #main-block {
   background-color: #f4f6f5;
-  border-radius: 59px;
+  border-radius: 60px;
 }
 
 #brands-section > img {

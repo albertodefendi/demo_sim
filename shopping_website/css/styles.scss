@@ -6,6 +6,7 @@
 $primary-color: #ebd96b;
 $secondary-color: #c2c8da;
 $font: "Poppins", sans-serif;
+$border-radius-buttons: 8px;
 
 // -------------------------------------------------------------------------------------------------------------
 
@@ -86,6 +87,11 @@ nav {
     background-color: white;
 }
 
+.black-bg {
+    background-color: black;
+    color: white;
+}
+
 .poppins-black {
     font-weight: 900 !important;
     letter-spacing: 0;
@@ -99,7 +105,7 @@ nav {
     background-color: black;
     color: white;
     padding: 16px 24px;
-    border-radius: 10px;
+    border-radius: $border-radius-buttons;
     border: none;
 }
 
@@ -110,10 +116,6 @@ nav {
 
 .tilted-bg-text {
     transform: rotate(2deg);
-}
-
-.yellow-bg {
-    background-color: $primary-color;
 }
 
 .card {
@@ -170,9 +172,33 @@ nav {
     @for $i from 0 through 100 {
         @if $i % 10 == 0 {
             &-#{$i} {
-                max-width: #{$i + "%"}; /* Imposta l'unità di misura a % */
+                max-width: #{$i + "%"};
             }
         }
+    }
+}
+
+.input-box {
+    width: 40%;
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: calc(0.5rem + $border-radius-buttons);
+}
+
+.form-input {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+
+.footer-links {
+    > * {
+        margin: 1rem;
     }
 }
 
@@ -180,7 +206,7 @@ nav {
 
 #main-block {
     background-color: #f4f6f5;
-    border-radius: 59px;
+    border-radius: 60px;
 }
 
 #brands-section {
