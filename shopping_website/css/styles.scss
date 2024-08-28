@@ -217,6 +217,10 @@ a {
     }
 }
 
+.round-corners {
+    border-radius: $border-radius-buttons;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 // ID
 
@@ -242,6 +246,10 @@ a {
     }
 }
 
+#newsletter > * {
+    margin: 0 auto;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 // Immagini
 
@@ -265,7 +273,6 @@ a {
 [data-theme="dark"] {
     body,
     .card,
-    .card-title,
     .theme-bg {
         background-color: $dt-black;
         color: $dt-white;

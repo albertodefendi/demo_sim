@@ -1,4 +1,35 @@
-document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+const alertPlaceholder = document.getElementById('newsletter')
+const appendAlert = (message, type) => {
+    const wrapper = document.createElement("div")
+    wrapper.classList += "max-width-40";
+    wrapper.id = "success-message"
+    wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible round-corners" role="alert">`,
+        `   <div>${message}</div>`,
+        '</div>'
+    ].join('')
+
+    alertPlaceholder.append(wrapper)
+}
+
+// -------------------------------------------------------------------------------------------------------------
+
+const newsletterButton = document.getElementById("newsletter-button");
+newsletterButton.addEventListener("click", () => {
+
+    newsletterButton.disabled = true;
+    document.getElementById("email").value = "";
+    appendAlert('Successfully subscribed! (Just kidding this is just a mockup)', 'success')
+    
+    setTimeout(() => {
+        document.getElementById("success-message").remove();
+        newsletterButton.disabled = false;
+    }, 2000);
+})
+
+// -------------------------------------------------------------------------------------------------------------
+
+document.getElementById('dark-mode-toggle').addEventListener('click', function () {
     if (document.documentElement.getAttribute('data-theme') === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
@@ -12,3 +43,28 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function()
 
 const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', savedTheme);
+
+// -------------------------------------------------------------------------------------------------------------
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const tl = gsap.timeline();
+
+        tl.to(button, { scale: 0.95, duration: 0.1 })
+            .to(button, { scale: 1, duration: 0.1 });
+    });
+});
+
+const anchors = document.querySelectorAll("a");
+
+anchors.forEach(anchor => {
+    anchor.addEventListener("mouseenter", () => {
+        gsap.to(anchor, { scale: 1.05, duration: 0.3 });
+    });
+    
+    anchor.addEventListener("mouseleave", () => {
+        gsap.to(anchor, { scale: 1, duration: 0.3 });
+    });
+});
