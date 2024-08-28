@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
 
 <body>
 
-    <div class="white-bg sticky-top">
+    <div class="theme-bg sticky-top">
         <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
             <div class="container-fluid d-flex px-5 py-3" id="navbar-container">
                 <div class="flex-1" id="nav-main-link">
@@ -32,6 +32,9 @@
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links-container">
                     <ul class="navbar-nav poppins-medium" id="navbar-links">
+                        <li class="nav-item px-3 align-self-center" id="dark-mode-toggle">
+                            <button type="button">DARK MODE</button>
+                        </li>
                         <li class="nav-item px-3 align-self-center">
                             <a class="nav-link" href="#">CATALOGUE</a>
                         </li>
@@ -45,7 +48,7 @@
                             <a class="nav-link" href="#">LIFESTYLE</a>
                         </li>
                         <li class="nav-item px-3 align-self-center">
-                            <button class="black-button mx-4" type="button">
+                            <button class="button-theme mx-4" type="button">
                                 <div>SIGN UP</div>
                             </button>
                         </li>
@@ -82,7 +85,7 @@
                 <div class="fs-7 my-5 mx-4">
                     Live for influential and innovative fashion!
                 </div>
-                <button class="black-button mx-4" type="button">
+                <button class="button-theme mx-4" type="button">
                     <div>SHOP NOW</div>
                 </button>
             </div>
@@ -174,7 +177,7 @@
                     <div>
                         <img src="../assets/sales_girl.png" alt="Young girl" id="sales-girl-img">
                     </div>
-                    <div class="align-self-center my-5">
+                    <div class="align-self-center color-black my-5">
                         <div class="poppins-black fs-3">
                             <div class="tilted-bg white-bg">
                                 <div class="tilted-bg-text px-4">PAYDAY</div>
@@ -192,7 +195,7 @@
                                 *Terms & Conditions apply
                             </div>
                         </div>
-                        <button class="black-button mx-4" type="button">
+                        <button class="button-black mx-4" type="button">
                             <div>SHOP NOW</div>
                         </button>
                     </div>
@@ -272,7 +275,7 @@
     <!--  ------------------------------------------------------------------------------------------------------------- -->
 
     <div class="footer pt-5">
-        <div class="primary-color-bg py-5">
+        <div class="primary-color-bg color-black py-5">
             <div class="container-md">
                 <div class="text-center">
                     <div class="poppins-black fs-4">
@@ -286,14 +289,14 @@
                     <div class="d-flex input-box p-2">
                         <input type="email" class="form-control form-input" id="email" aria-describedby="emailHelp"
                             placeholder="Add your email here">
-                        <button class="black-button" type="button">
+                        <button class="button-black" type="button">
                             SEND
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="black-bg py-5">
+        <div class="py-5" id="footer-link-section">
             <div class="d-flex justify-content-evenly">
                 <div class="footer-links">
                     <div class="poppins-black fs-5">
@@ -365,6 +368,8 @@
             </div>
         </div>
     </div>
+
+    <script src="../javascript/script.js"></script>
 
 </body>
 

@@ -12122,6 +12122,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
+  background-color: white;
   color: black;
   letter-spacing: -1px;
 }
@@ -12130,6 +12131,9 @@ nav * {
   letter-spacing: 1px;
 }
 
+a {
+  width: fit-content;
+}
 a:hover {
   cursor: pointer;
   color: #ebd96b !important;
@@ -12139,11 +12143,13 @@ a:hover {
   background-color: #ebd96b;
 }
 
+.theme-bg,
 .white-bg {
   background-color: white;
+  color: black;
 }
 
-.black-bg {
+.inversed-theme-bg {
   background-color: black;
   color: white;
 }
@@ -12157,12 +12163,16 @@ a:hover {
   font-weight: 500 !important;
 }
 
-.black-button {
+.button-black, .button-theme {
   background-color: black;
   color: white;
   padding: 16px 24px;
   border-radius: 8px;
   border: none;
+}
+
+.color-black {
+  color: black;
 }
 
 .tilted-bg {
@@ -12320,6 +12330,35 @@ a:hover {
 
 #main-girl-img {
   max-height: 500px;
+}
+
+#footer-link-section {
+  background-color: #242424;
+  color: #f1f1f1;
+}
+
+[data-theme=dark] body,
+[data-theme=dark] .card,
+[data-theme=dark] .card-title,
+[data-theme=dark] .theme-bg {
+  background-color: #242424;
+  color: #f1f1f1;
+}
+[data-theme=dark] .inversed-theme-bg, [data-theme=dark] .button-theme {
+  background-color: #f1f1f1;
+  color: #242424;
+}
+[data-theme=dark] .button-theme {
+  font-weight: 500;
+}
+[data-theme=dark] #main-block {
+  background-color: #5f5f5f;
+}
+[data-theme=dark] .tilted-bg-text {
+  color: black;
+}
+[data-theme=dark] nav a, [data-theme=dark] nav a:focus {
+  color: #f1f1f1;
 }
 
 /*# sourceMappingURL=styles.css.map */
