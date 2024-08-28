@@ -12047,6 +12047,10 @@ a:hover {
 
 .footer-links > * {
   margin: 1rem;
+  width: 90%;
+}
+.footer-links a {
+  display: block;
 }
 
 .footer-icon {
@@ -12118,6 +12122,10 @@ a:hover {
 }
 [data-theme=dark] .primary-color-bg {
   background-color: #c9f66f;
+}
+[data-theme=dark] .sales-banner {
+  background: rgb(201, 246, 111);
+  background: linear-gradient(145deg, rgb(201, 246, 111) 0%, rgb(54, 138, 43) 100%);
 }
 
 input[type=checkbox] {

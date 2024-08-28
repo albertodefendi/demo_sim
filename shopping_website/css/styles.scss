@@ -200,6 +200,11 @@ a {
 .footer-links {
     > * {
         margin: 1rem;
+        width: 90%;
+    }
+
+    a {
+        display: block;
     }
 }
 
@@ -295,6 +300,11 @@ a {
 
     .primary-color-bg {
         background-color: $dt-primary-color;
+    }
+
+    .sales-banner {
+        background: rgb(201, 246, 111);
+        background: linear-gradient(145deg, rgba(201, 246, 111, 1) 0%, rgba(54, 138, 43, 1) 100%);
     }
 }
 
