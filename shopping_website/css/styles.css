@@ -12083,7 +12083,7 @@ a:hover {
   border-radius: 60px;
 }
 
-#brands-section > img {
+#brands-section div > img {
   max-height: 50px;
 }
 
@@ -12216,6 +12216,39 @@ input[type=checkbox]:focus {
 @media (min-width: 1024px) {
   .d-1024-none-min {
     display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .marquee {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1199px) {
+  .marquee {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .marquee .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 7s linear infinite;
+  }
+  .marquee img {
+    margin: 0 40px;
+    display: inline !important;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
