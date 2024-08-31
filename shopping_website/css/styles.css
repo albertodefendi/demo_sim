@@ -12054,6 +12054,7 @@ a:hover {
 }
 .footer-links a {
   display: block;
+  width: fit-content;
 }
 
 .footer-icon {
