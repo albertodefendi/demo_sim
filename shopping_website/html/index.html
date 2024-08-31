@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
         rel="stylesheet">
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
@@ -68,7 +68,7 @@
     <!--  ------------------------------------------------------------------------------------------------------------- -->
 
     <div class="container-md py-5">
-        <div class="d-flex justify-content-between" id="main-block">
+        <div class="d-flex justify-content-lg-between" id="main-block">
             <div class="align-self-center m-5">
                 <div class="poppins-black fs-3">
                     <div class="tilted-bg white-bg">
@@ -87,7 +87,7 @@
                     <div>SHOP NOW</div>
                 </button>
             </div>
-            <div class="d-flex mx-5" id="main-girl">
+            <div class="d-flex d-992-none mx-5" id="main-girl">
                 <img class="align-self-end" src="../assets/main_girl.png" alt="Young girl" id="main-girl-img">
             </div>
         </div>
@@ -114,8 +114,8 @@
         <div class="fs-5 poppins-black">
             NEW ARRIVALS
         </div>
-        <div class="my-5 d-flex justify-content-between">
-            <div class="card">
+        <div class="my-5 d-flex justify-content-between d-1024-none">
+            <div class="card mx-2">
                 <a>
                     <img class="card-img-top" src="../assets/hoodies.png" alt="Hoodies model" alt="...">
                     <div class="card-body">
@@ -131,7 +131,7 @@
                     </div>
                 </a>
             </div>
-            <div class="card">
+            <div class="card mx-2">
                 <a>
                     <img class="card-img-top" src="../assets/coats.png" alt="Coats model">
                     <div class="card-body">
@@ -147,7 +147,7 @@
                     </div>
                 </a>
             </div>
-            <div class="card">
+            <div class="card mx-2">
                 <a>
                     <img class="card-img-top" src="../assets/tees.png" alt="T-shirt model">
                     <div class="card-body">
@@ -163,6 +163,83 @@
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+
+    <div class="carousel slide d-1024-none-min mx-3" id="new-arrivals-carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <a class="m-0-auto">
+                        <img class="card-img-top" src="../assets/hoodies.png" alt="Hoodies model" alt="...">
+                        <div class="card-body">
+                            <div>
+                                <div class="card-title fs-6">
+                                    Hoodies & Sweatshirts
+                                </div>
+                                <div class="card-description fs-7">
+                                    Explore Now!
+                                </div>
+                            </div>
+                            <img class="arrow-button" src="../assets/arrow.svg" alt="Arrow button">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <a class="m-0-auto">
+                        <img class="card-img-top" src="../assets/coats.png" alt="Coats model">
+                        <div class="card-body">
+                            <div>
+                                <div class="card-title fs-6">
+                                    Coats & Parkas
+                                </div>
+                                <div class="card-description fs-7">
+                                    Explore Now!
+                                </div>
+                            </div>
+                            <img class="arrow-button" src="../assets/arrow.svg" alt="Arrow button">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <a class="m-0-auto">
+                        <img class="card-img-top" src="../assets/tees.png" alt="T-shirt model">
+                        <div class="card-body">
+                            <div>
+                                <div class="card-title fs-6">
+                                    Tees & T-Shirt
+                                </div>
+                                <div class="card-description fs-7">
+                                    Explore Now!
+                                </div>
+                            </div>
+                            <img class="arrow-button" src="../assets/arrow.svg" alt="Arrow button">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#new-arrivals-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#new-arrivals-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#new-arrivals-carousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#new-arrivals-carousel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#new-arrivals-carousel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
     </div>
 
@@ -376,6 +453,7 @@
     </div>
 
     <script src="../javascript/script.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
