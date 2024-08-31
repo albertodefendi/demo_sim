@@ -130,6 +130,7 @@ a {
 
 .card {
     min-width: 320px;
+    @extend .mx-2;
 }
 
 .card-body {
@@ -415,6 +416,16 @@ input[type="checkbox"] {
 @media (max-width: 992px) {
     .d-992-none {
         display: none !important;
+    }
+}
+
+@media (max-width: 688px) {
+    .d-688-none {
+        display: none !important;
+    }
+    #download-section {
+        max-width: max-content;
+        margin: 0 10% 0 10%;
     }
 }
 
