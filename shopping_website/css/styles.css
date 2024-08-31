@@ -11932,7 +11932,7 @@ a:hover {
 }
 
 .card {
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .card-body {
@@ -12032,6 +12032,7 @@ a:hover {
 
 .input-box {
   width: 40%;
+  min-width: 340px;
   border: 1px solid #7f7f7f;
   background-color: white;
   border-radius: calc(0.5rem + 8px);
@@ -12190,6 +12191,11 @@ input[type=checkbox]:focus {
 @media (max-width: 992px) {
   .d-992-none {
     display: none !important;
+  }
+  #footer-link-section > div {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 688px) {
