@@ -7,6 +7,7 @@ $primary-color: #313f38;
 $primary-color-navbar: #28312d;
 $secondary-color: #fcd043;
 $white: #fffcf6;
+$footer-background: #fcf0d9;
 $white-opacity-40: #fffcf656;
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Poiret One", sans-serif;
@@ -220,6 +221,11 @@ button {
     left: 5%;
     color: $secondary-color;
     background-color: rgba(0, 0, 0, 0.466);
+}
+
+#footer {
+    // border-top: 1px solid $primary-color;
+    background-color: $footer-background;
 }
 
 // -------------------------------------------------------------------------------------------------------------

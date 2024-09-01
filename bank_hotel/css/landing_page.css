@@ -12058,6 +12058,10 @@ button {
   background-color: rgba(0, 0, 0, 0.466);
 }
 
+#footer {
+  background-color: #fcf0d9;
+}
+
 #logo {
   object-fit: contain;
   width: 60vw;
