@@ -1,3 +1,5 @@
+// Newsletter section
+
 const alertPlaceholder = document.getElementById('newsletter')
 const appendAlert = (message, type) => {
     const wrapper = document.createElement("div")
@@ -11,8 +13,6 @@ const appendAlert = (message, type) => {
 
     alertPlaceholder.append(wrapper)
 }
-
-// -------------------------------------------------------------------------------------------------------------
 
 const newsletterButton = document.getElementById("newsletter-button");
 newsletterButton.addEventListener("click", () => {
@@ -28,6 +28,7 @@ newsletterButton.addEventListener("click", () => {
 })
 
 // -------------------------------------------------------------------------------------------------------------
+// Dark mode toggler
 
 document.getElementById('dark-mode-toggle').addEventListener('click', function () {
     if (document.documentElement.getAttribute('data-theme') === 'dark') {
@@ -45,6 +46,7 @@ const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers
 document.documentElement.setAttribute('data-theme', savedTheme);
 
 // -------------------------------------------------------------------------------------------------------------
+//Buttons animations
 
 const buttons = document.querySelectorAll("button");
 
@@ -52,7 +54,7 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         const tl = gsap.timeline();
 
-        tl.to(button, { scale: 0.95, duration: 0.1 })
+        tl.to(button, { scale: 0.85, duration: 0.1 })
             .to(button, { scale: 1, duration: 0.1 });
     });
 });
@@ -68,3 +70,10 @@ anchors.forEach(anchor => {
         gsap.to(anchor, { scale: 1, duration: 0.3 });
     });
 });
+
+// -------------------------------------------------------------------------------------------------------------
+// Hamburger menu switch
+
+function switchHamburger() {
+    document.getElementById("hamburger").classList.toggle("change");
+}

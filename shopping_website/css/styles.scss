@@ -1,58 +1,4 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-
-// -------------------------------------------------------------------------------------------------------------
-
-$primary-color: #ebd96b;
-$dt-primary-color: #c9f66f;
-$grey: #7f7f7f;
-
-$dt-black: #242424;
-$dt-white: #f1f1f1;
-
-$font: "Poppins", sans-serif;
-$border-radius-buttons: 8px;
-$tilted-degrees: 2deg;
-
-// -------------------------------------------------------------------------------------------------------------
-
-$h1-font-size: $font-size-base * 7;
-$h2-font-size: $font-size-base * 6;
-$h3-font-size: $font-size-base * 2.8;
-$h4-font-size: $font-size-base * 2.3;
-$h5-font-size: $font-size-base * 1.8;
-$h6-font-size: $font-size-base * 1.5;
-$h7-font-size: $font-size-base * 1.2;
-$h8-font-size: $font-size-base;
-
-$new-font-sizes: (
-    1: $h1-font-size,
-    2: $h2-font-size,
-    3: $h3-font-size,
-    4: $h4-font-size,
-    5: $h5-font-size,
-    6: $h6-font-size,
-    7: $h7-font-size,
-    8: $h8-font-size
-);
-$font-sizes: map-merge($font-sizes, $new-font-sizes);
-
-$new-container-max-widths: (
-    sm: 640px,
-    md: 768px,
-    lg: 1024px,
-    xl: 1440px,
-    xxl: 1720px
-);
-$container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
-
-$card-border-width: 0;
-$card-height: 100%;
-
-// -------------------------------------------------------------------------------------------------------------
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
+@import "variables.scss";
 // -------------------------------------------------------------------------------------------------------------
 // Elementi default
 
@@ -234,8 +180,20 @@ a {
     position: unset;
 }
 
+.offcanvas-nav-links {
+    color: $dt-white;
+}
+
 // -------------------------------------------------------------------------------------------------------------
 // ID
+
+#navbar {
+    border-bottom: 1px solid $black;
+}
+
+#navbar-container > * {
+    margin: 10px 0;
+}
 
 #main-block {
     background-color: #f4f6f5;
@@ -278,91 +236,6 @@ a {
     background-color: $dt-black;
     color: $dt-white;
 }
-
-// -------------------------------------------------------------------------------------------------------------
-// Dark Mode
-
-[data-theme="dark"] {
-    body,
-    .card,
-    .theme-bg {
-        background-color: $dt-black;
-        color: $dt-white;
-    }
-
-    .negative-theme-bg,
-    .button-theme {
-        background-color: $dt-white;
-        color: $dt-black;
-    }
-
-    .button-theme {
-        font-weight: 500;
-    }
-
-    #main-block {
-        background-color: #5f5f5f;
-    }
-
-    .tilted-bg-text {
-        color: black;
-    }
-
-    nav a,
-    nav a:focus {
-        color: $dt-white;
-    }
-
-    #footer-link-section {
-        background-color: black;
-    }
-
-    .primary-color-bg {
-        background-color: $dt-primary-color;
-    }
-
-    .sales-banner {
-        background: rgb(201, 246, 111);
-        background: linear-gradient(145deg, rgba(201, 246, 111, 1) 0%, rgba(54, 138, 43, 1) 100%);
-    }
-}
-
-// -------------------------------------------------------------------------------------------------------------
-//DA CAMBIARE PERCHÉ NON MI PIACE
-
-// .hamburger {
-//     display: inline-block;
-//     cursor: pointer;
-//     border: black 1px solid;
-// }
-
-// .bar1,
-// .bar2,
-// .bar3 {
-//     width: 35px;
-//     height: 3px;
-//     background-color: black;
-//     margin: 6px 0;
-//     transition: 0.4s;
-//     border-radius: 20px;
-// }
-
-// .change .bar1 {
-//     transform: translate(0, 9px) rotate(-45deg);
-// }
-
-// .change .bar2 {
-//     opacity: 0;
-// }
-
-// .change .bar3 {
-//     transform: translate(0, -9px) rotate(45deg);
-// }
-
-// .hidden {
-//     display: none;
-//     transition: display 1s;
-// }
 
 // -------------------------------------------------------------------------------------------------------------
 // Dark mode toggle button
@@ -413,6 +286,82 @@ input[type="checkbox"] {
 }
 
 // -------------------------------------------------------------------------------------------------------------
+// Marquee
+
+.marquee {
+    @media (min-width: 1200px) {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 1199px) {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        box-sizing: border-box;
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 7s linear infinite;
+        }
+
+        img {
+            margin: 0 40px;
+            display: inline !important;
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------
+// Hamburger button
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: $dt-black;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+.hidden {
+    display: none;
+    transition: display 1s;
+}
+
+// -------------------------------------------------------------------------------------------------------------
 // Media query
 
 @media (max-width: 992px) {
@@ -450,40 +399,59 @@ input[type="checkbox"] {
 }
 
 // -------------------------------------------------------------------------------------------------------------
-// Marquee
+// Media query
 
-.marquee {
-    @media (min-width: 1200px) {
-        max-width: 1600px;
-        margin: 0 auto;
+[data-theme="dark"] {
+    body,
+    .card,
+    .theme-bg {
+        background-color: $dt-black;
+        color: $dt-white;
     }
 
-    @media (max-width: 1199px) {
-        display: inline-block;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-        box-sizing: border-box;
-
-        .marquee-content {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 7s linear infinite;
-        }
-
-        img {
-            margin: 0 40px;
-            display: inline !important;
-        }
+    .negative-theme-bg,
+    .button-theme {
+        background-color: $dt-white;
+        color: $dt-black;
     }
 
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+    .button-theme {
+        font-weight: 500;
+    }
+
+    #main-block {
+        background-color: #5f5f5f;
+    }
+
+    .tilted-bg-text {
+        color: black;
+    }
+
+    nav a,
+    nav a:focus {
+        color: $dt-white;
+    }
+
+    #footer-link-section {
+        background-color: black;
+    }
+
+    .primary-color-bg {
+        background-color: $dt-primary-color;
+    }
+
+    .sales-banner {
+        background: rgb(201, 246, 111);
+        background: linear-gradient(145deg, rgba(201, 246, 111, 1) 0%, rgba(54, 138, 43, 1) 100%);
+    }
+
+    #navbar {
+        border-bottom-color: $dt-white;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: #f3f3f3;
     }
 }
